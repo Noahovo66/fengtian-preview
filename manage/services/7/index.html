@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>編輯 中元普度超拔｜三重奉天宮</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../static/css/app.css">
+  <script src="../../../static/vendor/htmx.min.js" defer></script>
+</head>
+<body class="bg-temple-admin text-[15px]" hx-headers='{"X-CSRFToken": "bIZMWwHjJacjDMr33Nbo4qYwG9ZDpZKlv1ka0fgQt6h0xPLFA1Ek30HpoocBccpQ"}'>
+<div class="flex min-h-screen flex-col md:flex-row">
+  <aside class="flex flex-col gap-1 bg-temple-night px-4 py-5 text-[#E9D9BE] md:w-60 md:shrink-0">
+    <div class="flex items-center justify-between gap-2 px-2 pb-4">
+      <a href="../../orders/index.html" class="flex items-center gap-3 text-[#E9D9BE] no-underline">
+        <span class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-temple-goldlt font-serif font-black text-temple-goldlt">宮</span>
+        <span class="flex flex-col leading-tight"><strong class="font-serif text-lg text-temple-ivory">三重奉天宮</strong><span class="text-xs text-[#E9D9BE]">管理後台</span></span>
+      </a>
+    </div>
+    
+    
+    <nav class="flex flex-row flex-wrap gap-1 md:flex-col" aria-label="後台選單">
+      <a href="../../orders/index.html" class="rounded-md px-3 py-2.5 font-medium no-underline text-[#E9D9BE] hover:bg-white/10 hover:text-white">訂單核對</a>
+      <a href="../index.html" class="rounded-md px-3 py-2.5 font-medium no-underline bg-temple-goldlt text-temple-night">服務項目設定</a>
+      <a href="../../../admin/content/ceremony/index.html" class="rounded-md px-3 py-2.5 font-medium text-[#E9D9BE] no-underline hover:bg-white/10 hover:text-white">祭典法會</a>
+      <a href="../../../admin/content/news/index.html" class="rounded-md px-3 py-2.5 font-medium text-[#E9D9BE] no-underline hover:bg-white/10 hover:text-white">最新消息</a>
+      <a href="../../../admin/content/album/index.html" class="rounded-md px-3 py-2.5 font-medium text-[#E9D9BE] no-underline hover:bg-white/10 hover:text-white">活動花絮</a>
+      <a href="../../../admin/core/sitesetting/1/change/index.html" class="rounded-md px-3 py-2.5 font-medium text-[#E9D9BE] no-underline hover:bg-white/10 hover:text-white">網站設定</a>
+      <a href="../../../admin/auth/user/index.html" class="rounded-md px-3 py-2.5 font-medium text-[#E9D9BE] no-underline hover:bg-white/10 hover:text-white">帳號管理</a>
+      <a href="../../../admin/core/auditlog/index.html" class="rounded-md px-3 py-2.5 font-medium text-[#E9D9BE] no-underline hover:bg-white/10 hover:text-white">稽核紀錄</a>
+    </nav>
+    
+    <div class="mt-auto hidden border-t border-white/10 px-2 pt-4 text-sm md:block">
+      <div>admin</div>
+      <form method="post" data-preview-next=""><input type="hidden" name="csrfmiddlewaretoken" value="bIZMWwHjJacjDMr33Nbo4qYwG9ZDpZKlv1ka0fgQt6h0xPLFA1Ek30HpoocBccpQ"><button class="mt-1 text-temple-goldlt underline">登出</button></form>
+      <a href="../../../index.html" target="_blank" class="mt-2 block text-temple-goldlt">開啟前台網站 ↗</a>
+    </div>
+  </aside>
+
+  <main class="min-w-0 flex-1 px-4 py-6 sm:px-8">
+    
+    
+<a href="../index.html" class="font-bold">← 返回服務項目</a>
+<h1 class="mt-2 font-serif text-3xl font-black">編輯：中元普度超拔</h1>
+
+<form method="post" class="mt-5 space-y-6" id="svc-form" enctype="multipart/form-data" novalidate>
+  <input type="hidden" name="csrfmiddlewaretoken" value="bIZMWwHjJacjDMr33Nbo4qYwG9ZDpZKlv1ka0fgQt6h0xPLFA1Ek30HpoocBccpQ">
+  
+
+  <section class="rounded-xl border border-[#E2D9CC] bg-white p-5">
+    <h2 class="text-xl font-bold">基本設定與說明</h2>
+    <p class="text-temple-muted">「簡短說明」顯示在服務卡片；「詳細說明、適用對象、注意事項、說明圖片」顯示在前台的「說明」側欄。</p>
+    <div class="mt-4 grid gap-4 md:grid-cols-3">
+      
+        
+        <div class="">
+          <label class="fld-label req" for="id_name">名稱</label>
+          <input type="text" name="name" value="中元普度超拔" maxlength="50" class="fld" required id="id_name">
+          
+          
+        </div>
+        
+      
+        
+        <div class="">
+          <label class="fld-label req" for="id_kind">類別</label>
+          <select name="kind" class="fld" id="id_kind">
+  <option value="lamp">點燈／安奉</option>
+
+  <option value="rite">法會報名</option>
+
+  <option value="zanpu">普度贊普</option>
+
+  <option value="chaoba" selected>普度超拔</option>
+
+  <option value="donation">樂捐</option>
+
+</select>
+          
+          
+        </div>
+        
+      
+        
+        <div class="">
+          <label class="fld-label req" for="id_year">年度</label>
+          <input type="number" name="year" value="2027" min="0" class="fld" required id="id_year">
+          
+          
+        </div>
+        
+      
+        
+        <div class="">
+          <label class="fld-label req" for="id_price">價格</label>
+          <input type="number" name="price" value="1000" min="0" class="fld" required aria-describedby="id_price_helptext" id="id_price">
+          <p class="fld-help">0 = 隨喜（由信眾自填金額）</p>
+          
+        </div>
+        
+      
+        
+        <div class="">
+          <label class="fld-label " for="id_quota">名額</label>
+          <input type="number" name="quota" min="0" class="fld" aria-describedby="id_quota_helptext" id="id_quota">
+          <p class="fld-help">空白 = 不限</p>
+          
+        </div>
+        
+      
+        
+        <div class="">
+          <label class="fld-label " for="id_open_from">開放登記起</label>
+          <input type="date" name="open_from" value="2026-09-30" class="fld" id="id_open_from">
+          
+          
+        </div>
+        
+      
+        
+        <div class="">
+          <label class="fld-label " for="id_open_to">開放登記迄</label>
+          <input type="date" name="open_to" value="2027-02-28" class="fld" id="id_open_to">
+          
+          
+        </div>
+        
+      
+        
+        <div class="">
+          <label class="fld-label " for="id_gift_name">結緣品名稱</label>
+          <input type="text" name="gift_name" maxlength="50" class="fld" aria-describedby="id_gift_name_helptext" id="id_gift_name">
+          <p class="fld-help">空白 = 無結緣品</p>
+          
+        </div>
+        
+      
+        
+        <label class="check md:self-end"><input type="checkbox" name="receipt_allowed" id="id_receipt_allowed"><span class="font-medium">可開收據</span></label>
+        
+      
+        
+        <label class="check md:self-end"><input type="checkbox" name="is_active" id="id_is_active" checked><span class="font-medium">上架</span></label>
+        
+      
+        
+        <div class="md:col-span-3">
+          <label class="fld-label " for="id_description">簡短說明</label>
+          <textarea name="description" cols="40" rows="2" class="fld" aria-describedby="id_description_helptext" id="id_description">
+超拔歷代祖先、冤親債主，祈求往生淨土。</textarea>
+          <p class="fld-help">服務卡片上顯示的一兩句話</p>
+          
+        </div>
+        
+      
+        
+        <div class="md:col-span-3">
+          <label class="fld-label " for="id_audience">適用對象</label>
+          <input type="text" name="audience" value="欲超薦祖先或亡者之信眾" maxlength="100" class="fld" id="id_audience">
+          
+          
+        </div>
+        
+      
+        
+        <div class="md:col-span-3">
+          <label class="fld-label " for="id_detail">詳細說明</label>
+          <textarea name="detail" cols="40" rows="5" class="fld" aria-describedby="id_detail_helptext" id="id_detail">
+於中元普度法會期間超拔歷代祖先、冤親債主，祈求亡者離苦得樂、往生淨土。</textarea>
+          <p class="fld-help">「說明」側欄中的完整介紹</p>
+          
+        </div>
+        
+      
+        
+        <div class="md:col-span-3">
+          <label class="fld-label " for="id_notices">注意事項</label>
+          <textarea name="notices" cols="40" rows="3" class="fld" aria-describedby="id_notices_helptext" id="id_notices">
+</textarea>
+          <p class="fld-help">一行一則，以紅字顯示，例如：本宮無提供往生者點燈</p>
+          
+        </div>
+        
+      
+        
+        <div class="md:col-span-3">
+          <label class="fld-label " for="id_image">說明圖片</label>
+          <input type="file" name="image" accept="image/*" id="id_image">
+          
+          
+        </div>
+        
+      
+    </div>
+  </section>
+
+  <section class="rounded-xl border border-[#E2D9CC] bg-white p-5">
+    <div class="flex flex-wrap items-center justify-between gap-2">
+      <div><h2 class="text-xl font-bold">自訂表單欄位</h2>
+        <p class="text-temple-muted">「信眾姓名」與「數量／金額」為固定欄位，不需設定。性別請用名稱「性別」的下拉選單，名冊會自動帶入。</p></div>
+      <button type="button" class="btn-outline btn-sm" id="add-field">＋ 新增欄位</button>
+    </div>
+    <input type="hidden" name="fields-TOTAL_FORMS" value="4" id="id_fields-TOTAL_FORMS"><input type="hidden" name="fields-INITIAL_FORMS" value="4" id="id_fields-INITIAL_FORMS"><input type="hidden" name="fields-MIN_NUM_FORMS" value="0" id="id_fields-MIN_NUM_FORMS"><input type="hidden" name="fields-MAX_NUM_FORMS" value="1000" id="id_fields-MAX_NUM_FORMS">
+    <div class="mt-4 overflow-x-auto">
+      <table class="adm-table w-full min-w-[820px]">
+        <thead class="bg-[#F8F3EA]"><tr><th>排序</th><th>欄位名稱</th><th>類型</th><th>下拉選項</th><th>必填</th><th>顯示</th><th>刪除</th></tr></thead>
+        <tbody id="field-rows">
+          <tr class="border-t border-[#EEE6DA] align-top">
+  <td class="whitespace-nowrap"><input type="hidden" name="fields-0-id" value="17" id="id_fields-0-id"><input type="hidden" name="fields-0-sort_order" value="0" id="id_fields-0-sort_order">
+    <button type="button" data-move="up" class="h-10 w-10 rounded border border-temple-tan bg-white" aria-label="上移">↑</button>
+    <button type="button" data-move="down" class="h-10 w-10 rounded border border-temple-tan bg-white" aria-label="下移">↓</button></td>
+  <td><input type="text" name="fields-0-label" value="超拔對象" maxlength="30" class="fld" id="id_fields-0-label"></td>
+  <td><select name="fields-0-field_type" class="fld" id="id_fields-0-field_type">
+  <option value="text">文字</option>
+
+  <option value="lunar_birth">農曆生辰</option>
+
+  <option value="select" selected>下拉選單</option>
+
+  <option value="number">數字</option>
+
+  <option value="address">地址</option>
+
+</select></td>
+  <td><input type="text" name="fields-0-options_text" value="歷代祖先, 冤親債主, 嬰靈, 指定亡者" class="fld" placeholder="男, 女" aria-describedby="id_fields-0-options_text_helptext" id="id_fields-0-options_text"></td>
+  <td class="text-center"><input type="checkbox" name="fields-0-required" class="h-5 w-5 accent-temple-red" checked aria-label="必填"></td>
+  <td class="text-center"><input type="checkbox" name="fields-0-visible" class="h-5 w-5 accent-temple-red" checked aria-label="顯示"></td>
+  <td class="text-center"><input type="checkbox" name="fields-0-DELETE" class="h-5 w-5 accent-temple-red" aria-label="刪除"></td>
+</tr>
+<tr class="border-t border-[#EEE6DA] align-top">
+  <td class="whitespace-nowrap"><input type="hidden" name="fields-1-id" value="18" id="id_fields-1-id"><input type="hidden" name="fields-1-sort_order" value="1" id="id_fields-1-sort_order">
+    <button type="button" data-move="up" class="h-10 w-10 rounded border border-temple-tan bg-white" aria-label="上移">↑</button>
+    <button type="button" data-move="down" class="h-10 w-10 rounded border border-temple-tan bg-white" aria-label="下移">↓</button></td>
+  <td><input type="text" name="fields-1-label" value="亡者姓名（指定亡者時填寫）" maxlength="30" class="fld" id="id_fields-1-label"></td>
+  <td><select name="fields-1-field_type" class="fld" id="id_fields-1-field_type">
+  <option value="text" selected>文字</option>
+
+  <option value="lunar_birth">農曆生辰</option>
+
+  <option value="select">下拉選單</option>
+
+  <option value="number">數字</option>
+
+  <option value="address">地址</option>
+
+</select></td>
+  <td><input type="text" name="fields-1-options_text" class="fld" placeholder="男, 女" aria-describedby="id_fields-1-options_text_helptext" id="id_fields-1-options_text"></td>
+  <td class="text-center"><input type="checkbox" name="fields-1-required" class="h-5 w-5 accent-temple-red"  aria-label="必填"></td>
+  <td class="text-center"><input type="checkbox" name="fields-1-visible" class="h-5 w-5 accent-temple-red" checked aria-label="顯示"></td>
+  <td class="text-center"><input type="checkbox" name="fields-1-DELETE" class="h-5 w-5 accent-temple-red" aria-label="刪除"></td>
+</tr>
+<tr class="border-t border-[#EEE6DA] align-top">
+  <td class="whitespace-nowrap"><input type="hidden" name="fields-2-id" value="19" id="id_fields-2-id"><input type="hidden" name="fields-2-sort_order" value="2" id="id_fields-2-sort_order">
+    <button type="button" data-move="up" class="h-10 w-10 rounded border border-temple-tan bg-white" aria-label="上移">↑</button>
+    <button type="button" data-move="down" class="h-10 w-10 rounded border border-temple-tan bg-white" aria-label="下移">↓</button></td>
+  <td><input type="text" name="fields-2-label" value="陽上報恩人" maxlength="30" class="fld" id="id_fields-2-label"></td>
+  <td><select name="fields-2-field_type" class="fld" id="id_fields-2-field_type">
+  <option value="text" selected>文字</option>
+
+  <option value="lunar_birth">農曆生辰</option>
+
+  <option value="select">下拉選單</option>
+
+  <option value="number">數字</option>
+
+  <option value="address">地址</option>
+
+</select></td>
+  <td><input type="text" name="fields-2-options_text" class="fld" placeholder="男, 女" aria-describedby="id_fields-2-options_text_helptext" id="id_fields-2-options_text"></td>
+  <td class="text-center"><input type="checkbox" name="fields-2-required" class="h-5 w-5 accent-temple-red" checked aria-label="必填"></td>
+  <td class="text-center"><input type="checkbox" name="fields-2-visible" class="h-5 w-5 accent-temple-red" checked aria-label="顯示"></td>
+  <td class="text-center"><input type="checkbox" name="fields-2-DELETE" class="h-5 w-5 accent-temple-red" aria-label="刪除"></td>
+</tr>
+<tr class="border-t border-[#EEE6DA] align-top">
+  <td class="whitespace-nowrap"><input type="hidden" name="fields-3-id" value="20" id="id_fields-3-id"><input type="hidden" name="fields-3-sort_order" value="3" id="id_fields-3-sort_order">
+    <button type="button" data-move="up" class="h-10 w-10 rounded border border-temple-tan bg-white" aria-label="上移">↑</button>
+    <button type="button" data-move="down" class="h-10 w-10 rounded border border-temple-tan bg-white" aria-label="下移">↓</button></td>
+  <td><input type="text" name="fields-3-label" value="地址" maxlength="30" class="fld" id="id_fields-3-label"></td>
+  <td><select name="fields-3-field_type" class="fld" id="id_fields-3-field_type">
+  <option value="text">文字</option>
+
+  <option value="lunar_birth">農曆生辰</option>
+
+  <option value="select">下拉選單</option>
+
+  <option value="number">數字</option>
+
+  <option value="address" selected>地址</option>
+
+</select></td>
+  <td><input type="text" name="fields-3-options_text" class="fld" placeholder="男, 女" aria-describedby="id_fields-3-options_text_helptext" id="id_fields-3-options_text"></td>
+  <td class="text-center"><input type="checkbox" name="fields-3-required" class="h-5 w-5 accent-temple-red" checked aria-label="必填"></td>
+  <td class="text-center"><input type="checkbox" name="fields-3-visible" class="h-5 w-5 accent-temple-red" checked aria-label="顯示"></td>
+  <td class="text-center"><input type="checkbox" name="fields-3-DELETE" class="h-5 w-5 accent-temple-red" aria-label="刪除"></td>
+</tr>
+
+        </tbody>
+      </table>
+    </div>
+    <template id="field-tpl"><tr class="border-t border-[#EEE6DA] align-top">
+  <td class="whitespace-nowrap"><input type="hidden" name="fields-__prefix__-id" id="id_fields-__prefix__-id"><input type="hidden" name="fields-__prefix__-sort_order" value="0" id="id_fields-__prefix__-sort_order">
+    <button type="button" data-move="up" class="h-10 w-10 rounded border border-temple-tan bg-white" aria-label="上移">↑</button>
+    <button type="button" data-move="down" class="h-10 w-10 rounded border border-temple-tan bg-white" aria-label="下移">↓</button></td>
+  <td><input type="text" name="fields-__prefix__-label" maxlength="30" class="fld" id="id_fields-__prefix__-label"></td>
+  <td><select name="fields-__prefix__-field_type" class="fld" id="id_fields-__prefix__-field_type">
+  <option value="text" selected>文字</option>
+
+  <option value="lunar_birth">農曆生辰</option>
+
+  <option value="select">下拉選單</option>
+
+  <option value="number">數字</option>
+
+  <option value="address">地址</option>
+
+</select></td>
+  <td><input type="text" name="fields-__prefix__-options_text" class="fld" placeholder="男, 女" aria-describedby="id_fields-__prefix__-options_text_helptext" id="id_fields-__prefix__-options_text"></td>
+  <td class="text-center"><input type="checkbox" name="fields-__prefix__-required" class="h-5 w-5 accent-temple-red"  aria-label="必填"></td>
+  <td class="text-center"><input type="checkbox" name="fields-__prefix__-visible" class="h-5 w-5 accent-temple-red" checked aria-label="顯示"></td>
+  <td class="text-center"><span class="text-sm text-temple-muted">新</span></td>
+</tr>
+</template>
+  </section>
+
+  <div class="flex flex-wrap gap-3">
+    <button class="btn-primary">儲存</button>
+    <button class="btn-outline" name="then" value="stay">儲存並繼續編輯</button>
+    <a href="../index.html" class="btn btn-sm self-center text-temple-muted">取消</a>
+  </div>
+</form>
+
+    <form method="post" data-preview-next="" class="mt-10 md:hidden"><input type="hidden" name="csrfmiddlewaretoken" value="bIZMWwHjJacjDMr33Nbo4qYwG9ZDpZKlv1ka0fgQt6h0xPLFA1Ek30HpoocBccpQ"><button class="btn-outline btn-sm">登出</button></form>
+  </main>
+</div>
+
+<script>
+(function () {
+  var rows = document.getElementById('field-rows');
+  var total = document.getElementById('id_fields-TOTAL_FORMS');
+  document.getElementById('add-field').addEventListener('click', function () {
+    var html = document.getElementById('field-tpl').innerHTML.replace(/__prefix__/g, total.value);
+    rows.insertAdjacentHTML('beforeend', html);
+    total.value = parseInt(total.value, 10) + 1;
+    rows.lastElementChild.querySelector('input[type=text]').focus();
+  });
+  rows.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-move]');
+    if (!btn) return;
+    var tr = btn.closest('tr');
+    if (btn.dataset.move === 'up' && tr.previousElementSibling) rows.insertBefore(tr, tr.previousElementSibling);
+    if (btn.dataset.move === 'down' && tr.nextElementSibling) rows.insertBefore(tr.nextElementSibling, tr);
+  });
+  // 送出前依畫面順序寫入排序
+  document.getElementById('svc-form').addEventListener('submit', function () {
+    rows.querySelectorAll('tr').forEach(function (tr, i) {
+      var s = tr.querySelector('input[name$="-sort_order"]');
+      if (s) s.value = i;
+    });
+  });
+})();
+</script>
+
+
+<meta name="robots" content="noindex,nofollow">
+<style>.pv-bar{position:fixed;left:12px;bottom:12px;z-index:9999;display:flex;gap:8px;align-items:center;
+background:#2A1A14;color:#FFF8EA;padding:8px 14px;border-radius:999px;font:14px/1.4 "Noto Sans TC",sans-serif;
+box-shadow:0 4px 16px rgba(0,0,0,.25)}.pv-bar a{color:#E8CF8A;text-decoration:underline}</style>
+<div class="pv-bar" role="note">預覽版・示範資料・表單不會送出　<a href="../../../_preview/index.html">頁面導覽</a></div>
+<script>
+var PV_ROOT = '../../../';
+document.addEventListener('htmx:afterSwap', function (e) {
+  e.detail.target.querySelectorAll('[data-pv-root]').forEach(function (el) {
+    ['href', 'src'].forEach(function (a) {
+      var v = el.getAttribute(a);
+      if (v && v.charAt(0) !== '#') el.setAttribute(a, PV_ROOT + v);
+    });
+    el.removeAttribute('data-pv-root');
+  });
+});
+document.addEventListener('submit', function (e) {
+  var to = e.target.getAttribute('data-preview-next');
+  e.preventDefault();
+  if (to) location.href = to; else alert('預覽版：此操作不會真的送出。');
+}, true);
+document.addEventListener('click', function (e) {
+  if (e.target.closest('a[data-preview-off]')) { e.preventDefault(); alert('預覽版未提供此頁面。'); }
+}, true);
+</script>
+</body>
+</html>

@@ -1,0 +1,2613 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-hant" dir="ltr" class="light" x-data="theme('light')" x-bind="themeBindings" x-cloak>
+    <head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow">
+        <title> 三重奉天宮 | 修改 網站設定 | 宮廟內容管理</title>
+
+        <link href="../../../../../static/unfold/fonts/inter/styles.css" rel="stylesheet">
+        <link href="../../../../../static/unfold/fonts/material-symbols/styles.css" rel="stylesheet">
+
+        
+            <link href="../../../../../static/css/admin.css" rel="stylesheet">
+        
+
+        
+
+        <link href="../../../../../static/unfold/css/styles.css" rel="stylesheet">
+
+        <script src="../../../../../static/unfold/js/alpine/alpine.anchor.js" defer></script>
+        <script src="../../../../../static/unfold/js/alpine/alpine.persist.js" defer></script>
+        <script src="../../../../../static/unfold/js/alpine/alpine.sort.js" defer></script>
+        <script src="../../../../../static/unfold/js/alpine/alpine.focus.js" defer></script>
+        <script src="../../../../../static/unfold/js/alpine/alpine.resize.js" defer></script>
+        <script src="../../../../../static/unfold/js/alpine/alpine.js" defer></script>
+        <script src="../../../../../static/unfold/js/htmx/htmx.js"></script>
+        <script src="../../../../../static/unfold/js/chart/chart.js"></script>
+
+        
+
+        
+
+        
+    <script src="../../../../jsi18n.js"></script>
+    <script id="formClasses" type="application/json">{"label": "block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark", "prose": "font-normal whitespace-normal prose-sm prose-a:text-link prose-blockquote:border-l-4 prose-blockquote:not-italic prose-pre:bg-base-50 prose-pre:rounded-default prose-headings:font-semibold prose-headings:text-important prose-headings:tracking-tight prose-strong:font-semibold prose-ol:list-decimal prose-ol:flex prose-ol:flex-col prose-ol:gap-0.5 prose-ol:mt-2 prose-ul:list-disc prose-ul:flex prose-ul:flex-col prose-ul:gap-0.5 prose-ul:mt-2 prose-li:m-0 dark:prose-pre:bg-base-800 dark:prose-blockquote:border-base-700 dark:prose-blockquote:text-base-300", "text_input": "border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-2xl", "textarea": "border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-4xl appearance-none", "select": "border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full pr-8! max-w-2xl appearance-none text-ellipsis", "checkbox": "appearance-none bg-white block border border-base-300 h-4 min-w-4 relative rounded-[4px] shadow-xs w-4 dark:bg-base-900 dark:border-base-700 dark:checked:after:text-white after:absolute after:content-['check\\_small'] after:flex! after:h-4 after:items-center after:justify-center after:leading-none after:material-symbols-outlined after:-ml-px after:-mt-px after:text-white after:w-4 dark:after:text-transparent checked:bg-primary-600 dark:checked:bg-primary-600 checked:border-primary-600 dark:checked:border-primary-600", "button": "border cursor-pointer font-medium px-3 py-2 rounded-default text-center whitespace-nowrap bg-primary-600 border-transparent text-white", "radio": "appearance-none bg-white block border border-base-300 h-4 min-w-4 relative rounded-full w-4 dark:bg-base-900 dark:border-base-700 after:absolute after:bg-transparent after:content-[''] after:flex after:h-2 after:items-center after:justify-center after:leading-none after:left-1/2 after:rounded-full after:text-white after:top-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:w-2 dark:after:text-base-700 dark:after:bg-transparent checked:bg-primary-600 checked:border-primary-600 checked:after:bg-white dark:checked:after:bg-base-900", "switch": "appearance-none bg-base-300 block cursor-pointer h-5 relative rounded-full w-8 min-w-8 disabled:cursor-not-allowed disabled:opacity-50 focus:outline-none after:absolute after:bg-white after:content-[''] after:bg-red-300 after:h-3 after:rounded-full after:shadow-xs after:transition-all after:left-1 after:top-1 after:w-3 checked:bg-green-500 checked:after:left-4 dark:bg-base-600 dark:checked:bg-green-700", "file": "bg-white border border-base-200 flex grow items-center overflow-hidden rounded-default shadow-xs max-w-2xl focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-primary-600 group-[.errors]:border-red-600 focus-within:group-[.errors]:outline-red-500 dark:bg-base-900 dark:border-base-700 dark:group-[.errors]:border-red-500 dark:focus-within:group-[.errors]:outline-red-500"}</script>
+    <script src="../../../../../static/admin/js/vendor/jquery/jquery.min.js"></script>
+<script src="../../../../../static/admin/js/jquery.init.js"></script>
+<script src="../../../../../static/admin/js/core.js"></script>
+<script src="../../../../../static/admin/js/admin/RelatedObjectLookups.js"></script>
+<script src="../../../../../static/admin/js/actions.js"></script>
+<script src="../../../../../static/admin/js/urlify.js"></script>
+<script src="../../../../../static/admin/js/prepopulate.js"></script>
+<script src="../../../../../static/admin/js/vendor/xregexp/xregexp.min.js"></script>
+
+
+        <script src="../../../../../static/unfold/js/app.js"></script>
+
+        
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+        
+            <meta name="robots" content="NONE,NOARCHIVE">
+        
+    </head>
+
+    <body class="antialiased bg-base-50 font-sans text-font-default-light text-sm dark:bg-base-900 dark:text-font-default-dark  app-core model-sitesetting change-form" data-admin-utc-offset="28800" x-data="{ activeTab: 'general', }" x-init="activeTab = getCurrentTab() || 'general';">
+        
+            <style id="unfold-theme-colors">
+                :root {
+                    
+
+                    
+                        
+                            --color-base-50: rgb(244, 241, 236);
+                        
+                            --color-base-100: rgb(239, 230, 216);
+                        
+                            --color-base-200: rgb(226, 217, 204);
+                        
+                            --color-base-300: rgb(205, 189, 165);
+                        
+                            --color-base-400: rgb(183, 159, 124);
+                        
+                            --color-base-500: rgb(138, 115, 96);
+                        
+                            --color-base-600: rgb(107, 85, 71);
+                        
+                            --color-base-700: rgb(74, 52, 40);
+                        
+                            --color-base-800: rgb(58, 42, 32);
+                        
+                            --color-base-900: rgb(42, 26, 20);
+                        
+                            --color-base-950: rgb(26, 15, 11);
+                        
+                    
+                        
+                            --color-primary-50: rgb(253, 246, 236);
+                        
+                            --color-primary-100: rgb(250, 233, 214);
+                        
+                            --color-primary-200: rgb(240, 201, 168);
+                        
+                            --color-primary-300: rgb(222, 150, 120);
+                        
+                            --color-primary-400: rgb(196, 93, 77);
+                        
+                            --color-primary-500: rgb(164, 40, 36);
+                        
+                            --color-primary-600: rgb(142, 27, 27);
+                        
+                            --color-primary-700: rgb(116, 21, 21);
+                        
+                            --color-primary-800: rgb(94, 15, 15);
+                        
+                            --color-primary-900: rgb(70, 11, 11);
+                        
+                            --color-primary-950: rgb(58, 10, 10);
+                        
+                    
+                        
+                            --color-font-subtle-light: var(--color-base-500);
+                        
+                            --color-font-subtle-dark: var(--color-base-400);
+                        
+                            --color-font-default-light: var(--color-base-600);
+                        
+                            --color-font-default-dark: var(--color-base-300);
+                        
+                            --color-font-important-light: var(--color-base-900);
+                        
+                            --color-font-important-dark: var(--color-base-100);
+                        
+                    
+                }
+            </style>
+        
+
+        
+    <div id="page" class="flex max-w-full min-h-screen ">
+        
+            
+                
+
+<div class="relative z-60" x-bind:class="{'select-none': resizing}" x-on:mousemove.window="if (resizing) { sidebarWidth = Math.min(max, Math.max(min, $event.clientX)); localStorage.setItem('sidebarWidth', sidebarWidth); }" x-on:mouseup.window="resizing = false" x-data="{ min: 220, max: 360, resizing: false }">
+    <div class="fixed xl:relative " x-show="sidebarOpen" x-bind:style="`width: ${sidebarWidth}px`">
+        <div class="bg-base-50 relative z-30 dark:bg-base-900">
+            <div id="nav-sidebar" class="bg-base-50 border-e border-base-200 bottom-0 fixed max-h-screen top-0  dark:border-base-800 dark:bg-base-900 " x-bind:style="`width: ${sidebarWidth}px`">
+                
+                    
+
+<nav id="nav-sidebar-inner" class="bg-base-50 flex flex-col min-h-screen dark:text-font-default-dark dark:bg-base-950/20 ">
+    
+
+<div class="border-b border-base-200 flex gap-3 items-center h-[65px] mb-4 dark:border-base-800 px-3 ">
+    <div class="bg-transparent flex font-semibold gap-3 grow min-w-0 h-[64px] items-center px-3 "
+         
+    >
+        
+            
+
+
+    <a href="#" data-preview-off class="bg-primary-600 flex h-[38px] items-center justify-center rounded-default shrink-0 text-white text-xs w-[38px]">
+    <span class="material-symbols-outlined md-18">temple_buddhist</span>
+    </a>
+
+
+<div class="flex flex-col grow justify-center min-w-0">
+    <div class="text-important tracking-tight *:truncate xl:text-base">
+        
+    <div id="site-name" class="flex items-center">
+    
+        <a href="#" data-preview-off>
+            管理後台
+        </a>
+    
+
+    
+</div>
+
+
+    </div>
+
+    
+</div>
+
+        
+
+        
+    </div>
+
+    <span class="material-symbols-outlined block cursor-pointer h-[18px] xl:hidden! hover:text-base-700 dark:hover:text-base-200" x-on:click="sidebarToggle()">
+        close
+    </span>
+
+    
+
+
+
+</div>
+
+
+    
+
+
+
+
+    
+        
+
+
+    <div id="nav-sidebar-apps" class="h-0 grow overflow-auto scrollbar-default-hover">
+        
+            
+                
+
+                <div class="hidden mb-1.5 has-[ol]:has-[li]:block" >
+                    
+
+                    
+                        <h2 class="font-semibold flex flex-row group items-center mb-1 mx-3 py-1.5 px-3 select-none text-font-important-light text-sm dark:text-font-important-dark " >
+                            日常作業
+
+                            
+
+
+
+
+                            
+                        </h2>
+                    
+
+                    <ol class="flex flex-col px-6" >
+                        
+                            
+                                <li>
+                                    <a href="../../../../../manage/orders/index.html" class="flex h-[38px] items-center -mx-3 px-3 rounded-default hover:text-primary-600 dark:hover:text-primary-500 " >
+                                        
+                                            <span class="material-symbols-outlined md-18 mr-3 w-[18px]">
+                                                fact_check
+                                            </span>
+                                        
+
+                                        <span>訂單核對</span>
+
+                                        
+
+
+
+                                    </a>
+                                </li>
+                            
+                        
+                            
+                                <li>
+                                    <a href="../../../../../manage/services/index.html" class="flex h-[38px] items-center -mx-3 px-3 rounded-default hover:text-primary-600 dark:hover:text-primary-500 " >
+                                        
+                                            <span class="material-symbols-outlined md-18 mr-3 w-[18px]">
+                                                local_fire_department
+                                            </span>
+                                        
+
+                                        <span>服務項目設定</span>
+
+                                        
+
+
+
+                                    </a>
+                                </li>
+                            
+                        
+                    </ol>
+                </div>
+            
+        
+            
+                
+
+                <div class="hidden mb-1.5 has-[ol]:has-[li]:block" >
+                    
+
+                    
+                        <h2 class="font-semibold flex flex-row group items-center mb-1 mx-3 py-1.5 px-3 select-none text-font-important-light text-sm dark:text-font-important-dark " >
+                            網站內容
+
+                            
+
+
+
+
+                            
+                        </h2>
+                    
+
+                    <ol class="flex flex-col px-6" >
+                        
+                            
+                                <li>
+                                    <a href="../../../../content/ceremony/index.html" class="flex h-[38px] items-center -mx-3 px-3 rounded-default hover:text-primary-600 dark:hover:text-primary-500 " >
+                                        
+                                            <span class="material-symbols-outlined md-18 mr-3 w-[18px]">
+                                                event
+                                            </span>
+                                        
+
+                                        <span>祭典法會</span>
+
+                                        
+
+
+
+                                    </a>
+                                </li>
+                            
+                        
+                            
+                                <li>
+                                    <a href="../../../../content/news/index.html" class="flex h-[38px] items-center -mx-3 px-3 rounded-default hover:text-primary-600 dark:hover:text-primary-500 " >
+                                        
+                                            <span class="material-symbols-outlined md-18 mr-3 w-[18px]">
+                                                campaign
+                                            </span>
+                                        
+
+                                        <span>最新消息</span>
+
+                                        
+
+
+
+                                    </a>
+                                </li>
+                            
+                        
+                            
+                                <li>
+                                    <a href="../../../../content/album/index.html" class="flex h-[38px] items-center -mx-3 px-3 rounded-default hover:text-primary-600 dark:hover:text-primary-500 " >
+                                        
+                                            <span class="material-symbols-outlined md-18 mr-3 w-[18px]">
+                                                photo_library
+                                            </span>
+                                        
+
+                                        <span>活動花絮</span>
+
+                                        
+
+
+
+                                    </a>
+                                </li>
+                            
+                        
+                            
+                                <li>
+                                    <a href="index.html" class="flex h-[38px] items-center -mx-3 px-3 rounded-default hover:text-primary-600 dark:hover:text-primary-500 bg-base-100 font-semibold text-primary-600 dark:bg-white/[.06] dark:text-primary-500 active" >
+                                        
+                                            <span class="material-symbols-outlined md-18 mr-3 w-[18px]">
+                                                settings
+                                            </span>
+                                        
+
+                                        <span>網站設定</span>
+
+                                        
+
+
+
+                                    </a>
+                                </li>
+                            
+                        
+                    </ol>
+                </div>
+            
+        
+            
+                
+
+                <div class="hidden mb-1.5 has-[ol]:has-[li]:block" >
+                    
+
+                    
+                        <h2 class="font-semibold flex flex-row group items-center mb-1 mx-3 py-1.5 px-3 select-none text-font-important-light text-sm dark:text-font-important-dark " >
+                            系統
+
+                            
+
+
+
+
+                            
+                        </h2>
+                    
+
+                    <ol class="flex flex-col px-6" >
+                        
+                            
+                                <li>
+                                    <a href="../../../../auth/user/index.html" class="flex h-[38px] items-center -mx-3 px-3 rounded-default hover:text-primary-600 dark:hover:text-primary-500 " >
+                                        
+                                            <span class="material-symbols-outlined md-18 mr-3 w-[18px]">
+                                                group
+                                            </span>
+                                        
+
+                                        <span>帳號管理</span>
+
+                                        
+
+
+
+                                    </a>
+                                </li>
+                            
+                        
+                            
+                                <li>
+                                    <a href="../../../auditlog/index.html" class="flex h-[38px] items-center -mx-3 px-3 rounded-default hover:text-primary-600 dark:hover:text-primary-500 " >
+                                        
+                                            <span class="material-symbols-outlined md-18 mr-3 w-[18px]">
+                                                history
+                                            </span>
+                                        
+
+                                        <span>稽核紀錄</span>
+
+                                        
+
+
+
+                                    </a>
+                                </li>
+                            
+                        
+                            
+                                <li>
+                                    <a href="#" data-preview-off class="flex h-[38px] items-center -mx-3 px-3 rounded-default hover:text-primary-600 dark:hover:text-primary-500 " >
+                                        
+                                            <span class="material-symbols-outlined md-18 mr-3 w-[18px]">
+                                                phonelink_lock
+                                            </span>
+                                        
+
+                                        <span>兩步驟驗證裝置</span>
+
+                                        
+
+
+
+                                    </a>
+                                </li>
+                            
+                        
+                    </ol>
+                </div>
+            
+        
+    </div>
+
+    
+
+
+
+
+
+    
+
+    <div class="border-t border-base-200 px-6 py-3 relative dark:border-base-800" x-data="{ openUserLinks: false }">
+    <nav class="absolute bg-white border border-base-200 flex flex-col leading-none py-1 rounded-default shadow-lg bottom-[73px] left-3 right-3 z-50 dark:bg-base-800 dark:border-base-700" x-cloak x-show="openUserLinks" x-transition x-on:click.outside="openUserLinks = false">
+        
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+
+        
+
+
+    <a href="../../../../../manage/orders/index.html" class="mx-1 px-3 py-2 rounded-default hover:bg-base-100 hover:text-base-700 dark:hover:bg-base-700 dark:hover:text-base-200">
+        檢視網站
+    </a>
+
+
+
+    
+        <a href="#" data-preview-off class="mx-1 px-3 py-2 rounded-default hover:bg-base-100 hover:text-base-700 dark:hover:bg-base-700 dark:hover:text-base-200">
+            修改密碼
+        </a>
+    
+
+
+<div class="border-t border-base-200 mt-1 pt-1 dark:border-base-700">
+    <form id="logout-form" method="post" data-preview-next="" class="mx-1">
+        <input type="hidden" name="csrfmiddlewaretoken" value="YFhryhC1fI1fotDRRCXJu1EFUGxJS5E9iYCPC0byZE6WiwXtoQqFtBnyCVKHFijE">
+
+        <button type="submit" class="bg-none flex cursor-pointer items-center px-3 py-1.5 text-left text-red-700 rounded-default w-full hover:bg-red-100 dark:hover:bg-red-500/20 dark:text-red-400 dark:hover:text-red-400">
+            登出 <span class="ml-auto material-symbols-outlined text-red-700 dark:text-red-400">logout</span>
+        </button>
+    </form>
+</div>
+
+    </nav>
+
+    <div class="cursor-pointer flex flex-row gap-3 items-center min-h-[64px] -mx-6 -my-3 px-6 py-3 hover:bg-base-100 dark:hover:bg-base-800"
+         x-on:click="if (!$event.target.closest('a')) { openUserLinks = !openUserLinks }"
+         x-bind:class="{'bg-base-100 dark:bg-base-800': openUserLinks}">
+        
+    <div class="bg-base-200 bg-cover bg-no-repeat bg-center font-semibold flex items-center justify-center relative select-none text-important dark:bg-base-700 after:absolute after:inset-0 after:inset-ring after:inset-ring-base-800/10 dark:after:inset-ring-base-200/10
+                
+                    h-[38px] min-w-[38px] w-[38px]
+                
+                rounded-default after:rounded-default"
+         >
+        
+            A
+        
+
+        
+    </div>
+
+
+
+        <div class="flex flex-col select-none min-w-0">
+            <div class="font-semibold text-important tracking-tight truncate">
+                admin
+            </div>
+
+            
+                <div class="text-subtle text-xs truncate">
+                    admin@example.com
+                </div>
+            
+        </div>
+
+        <span class="material-symbols-outlined ml-auto select-none text-font-default-light dark:text-font-default-dark">
+            unfold_more
+        </span>
+    </div>
+</div>
+
+</nav>
+
+                
+
+                <div class="absolute bottom-0 cursor-col-resize flex group items-center justify-center right-[-3px] top-0 resize w-[7px]" x-on:mousedown="resizing = true">
+                    <div class="h-full w-[3px] transition-colors group-hover:bg-base-300 group-hover:dark:bg-base-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+        
+
+        <div id="main" class="bg-white flex flex-col grow min-w-0 dark:bg-base-900 ">
+            
+                
+
+<div class="bg-white border-b border-base-200 mb-4 px-4 z-40 dark:bg-base-900 dark:border-base-800 dark:text-font-default-dark ">
+    <div class="container flex items-center h-16 mx-auto py-4 ">
+        <div id="header-inner" class="flex items-center relative w-full">
+            <div class="flex items-center w-full">
+                
+                    
+                        
+                            
+
+<div class="flex flex-row grow font-semibold items-center min-w-0 mr-3">
+    
+        <span class="cursor-pointer flex flex-row items-center">
+            <span class="material-symbols-outlined" x-on:click="sidebarToggle()">
+                dock_to_right
+            </span>
+        </span>
+
+        <span class="block bg-base-200 h-5 mx-3 w-px dark:bg-base-700"></span>
+    
+
+    
+        
+
+
+
+    
+
+    <h1 class="overflow-hidden leading-5 text-important flex items-center whitespace-nowrap xl:text-base">
+        <a href="#" data-preview-off class="align-middle inline-block leading-5 min-w-0 truncate tracking-tight">
+        宮廟設定
+        </a ><span class="material-symbols-outlined inline-block align-middle leading-5 mx-2 text-base-400 dark:text-base-500">chevron_right</span><a href="index.html" class="align-middle inline-block leading-5 min-w-0 truncate tracking-tight">
+        網站設定
+        </a ><span class="material-symbols-outlined inline-block align-middle leading-5 mx-2 text-base-400 dark:text-base-500">chevron_right</span><a href="index.html" class="align-middle inline-block leading-5 min-w-0 truncate tracking-tight">
+        三重奉天宮
+        </a >
+
+
+        
+    </h1>
+</div>
+
+                        
+
+                        
+                            
+
+
+    <div class="flex flex-row gap-3 items-center ml-auto">
+        
+
+        
+
+
+    <div class="flex flex-row items-center ml-auto" x-data="{ showActions: false }" x-on:click.outside="showActions = false">
+        <a href="#"       
+
+class="font-medium inline-flex group items-center gap-1 relative rounded-default justify-center whitespace-nowrap cursor-pointer
+
+    px-3 py-2
+
+
+    border border-base-200 bg-white shadow-xs text-important dark:border-base-700 dark:bg-transparent hover:bg-base-100/80 dark:hover:bg-base-800/80
+
+ !px-0 w-[38px] lg:hidden" 
+ x-on:click='showActions = !showActions'>
+
+
+
+            <span class="material-symbols-outlined">more_horiz</span>
+        
+</a>
+
+
+        <ul class="bg-white container hidden flex-col font-medium mx-auto left-0 right-0 lg:flex lg:flex-row lg:mb-0 lg:mt-0 max-lg:absolute max-lg:top-16 dark:bg-base-900" x-bind:class="{'max-lg:flex': showActions}">
+            
+                
+
+                
+                    <li class="hover:bg-base-500/8 dark:border-base-700 max-lg:-mt-px select-none hover:text-primary-600 border-base-200 border min-lg:first:rounded-l-default dark:hover:text-primary-500 max-lg:first:rounded-t-default min-lg:last:rounded-r-default max-lg:last:rounded-b-default min-lg:-ml-px" ><a href="#" data-preview-offclass="cursor-pointer flex grow items-center gap-2 px-3 py-2 text-left whitespace-nowrap"  
+
+       
+
+       ><span class="material-symbols-outlined">
+                history
+            </span>
+        
+
+        歷史
+
+        
+    </a></li>
+                
+            
+
+            
+
+            
+        </ul>
+    </div>
+
+
+
+        
+            
+    
+
+        
+    </div>
+
+
+                        
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+
+            
+                
+            
+
+            <div class="@container px-4 pb-4 grow">
+                <div id="content" class="container mx-auto colM ">
+                    
+                        
+
+                    
+
+                    
+    <div id="content-main">
+        
+
+        
+
+        <form  enctype="multipart/form-data"  x-bind:action="activeTab && activeTab !== 'general' ? window.location.pathname + window.location.search + '#' + activeTab : window.location.pathname + window.location.search" method="post" id="sitesetting_form"  novalidate>
+            <input type="hidden" name="csrfmiddlewaretoken" value="YFhryhC1fI1fotDRRCXJu1EFUGxJS5E9iYCPC0byZE6WiwXtoQqFtBnyCVKHFijE">
+
+            
+
+            
+
+            <div class="flex flex-col gap-6">
+                
+
+                
+
+                
+
+                
+                    
+                        
+                            
+                                
+
+<fieldset class="module relative  " x-show="activeTab == 'general'">
+    
+
+    
+        <h2 class="bg-base-100 flex flex-row font-semibold h-[38px] gap-1 items-center mb-4 px-3 rounded-default text-important dark:bg-white/[.02]  " >
+    
+        基本資料
+    
+
+    
+
+</h2>
+
+    
+
+    
+
+    
+
+    <div class="aligned overflow-hidden shadow-xs form-rows border-base-200 border rounded-default dark:border-base-800">
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="field-temple_name flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed border-base-200 lg:items-center group/line field-line flex-col px-3 grow group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark required" for="id_temple_name">宮廟名稱<span class="text-red-600 dark:text-red-500">*</span></label>
+</div>
+
+<div class="grow relative">
+    
+        <div class="max-w-2xl relative w-full">
+    
+
+    
+
+    <input type="text" name="temple_name" value="三重奉天宮" class="border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-2xl " maxlength="50" required id="id_temple_name">
+
+
+    
+
+    
+</div>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex field-temple_subtitle group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed border-base-200 lg:items-center group/line field-line flex-col px-3 grow group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_temple_subtitle">副標（英文名等）</label>
+</div>
+
+<div class="grow relative">
+    
+        <div class="max-w-2xl relative w-full">
+    
+
+    
+
+    <input type="text" name="temple_subtitle" value="蘇府王爺廟" class="border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-2xl " maxlength="80" id="id_temple_subtitle">
+
+
+    
+
+    
+</div>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed field-logo border-base-200 lg:items-center group/line field-line flex-col px-3 grow group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_logo">Logo</label>
+</div>
+
+<div class="grow relative">
+    
+        <div class="bg-white border border-base-200 flex grow items-center overflow-hidden rounded-default shadow-xs max-w-2xl focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-primary-600 group-[.errors]:border-red-600 focus-within:group-[.errors]:outline-red-500 dark:bg-base-900 dark:border-base-700 dark:group-[.errors]:border-red-500 dark:focus-within:group-[.errors]:outline-red-500">
+    
+
+    <label for="id_logo" class="flex grow relative">
+        <input type="text" aria-label="Choose file to upload" value="Choose file to upload" disabled class="grow font-medium min-w-0 px-3 py-2 text-ellipsis">
+        <span class="absolute cursor-pointer left-0 bottom-0 top-0 right-0"></span>
+    </label>
+
+    <div class="bg-white flex flex-none items-center leading-none self-stretch dark:bg-base-900">
+        <div class="opacity-0 overflow-hidden w-[0px]">
+            <input type="file" name="logo"  accept="image/*" id="id_logo" />
+        </div>
+
+        
+
+        <label for="id_logo" class="cursor-pointer text-base-400 px-3 hover:text-base-700 dark:text-base-500 dark:hover:text-base-200">
+            <span class="block material-symbols-outlined">upload</span>
+        </label>
+    </div>
+</div>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed border-base-200 lg:items-center group/line field-line flex-col px-3 grow field-phone group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_phone">電話</label>
+</div>
+
+<div class="grow relative">
+    
+        <div class="max-w-2xl relative w-full">
+    
+
+    
+
+    <input type="text" name="phone" value="（待客戶提供）" class="border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-2xl " maxlength="30" id="id_phone">
+
+
+    
+
+    
+</div>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 field-email border-dashed border-base-200 lg:items-center group/line field-line flex-col px-3 grow group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_email">Email</label>
+</div>
+
+<div class="grow relative">
+    
+        <input type="email" name="email" class="border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-2xl " maxlength="254" id="id_email">
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row last">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed border-base-200 lg:items-center group/line field-line flex-col px-3 grow field-address group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_address">地址</label>
+</div>
+
+<div class="grow relative">
+    
+        <div class="max-w-2xl relative w-full">
+    
+
+    
+
+    <input type="text" name="address" value="新北市三重區（待客戶提供）" class="border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-2xl " maxlength="200" id="id_address">
+
+
+    
+
+    
+</div>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+    </div>
+
+    
+</fieldset>
+
+                            
+                        
+                            
+                                
+
+<fieldset class="module relative  " x-show="activeTab == 'general'">
+    
+
+    
+        <h2 class="bg-base-100 flex flex-row font-semibold h-[38px] gap-1 items-center mb-4 px-3 rounded-default text-important dark:bg-white/[.02]  " >
+    
+        首頁
+    
+
+    
+
+</h2>
+
+    
+
+    
+
+    
+
+    <div class="aligned overflow-hidden shadow-xs form-rows border-base-200 border rounded-default dark:border-base-800">
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed border-base-200 lg:items-center group/line field-line flex-col px-3 grow field-hero_badge group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_hero_badge">主視覺標籤</label>
+</div>
+
+<div class="grow relative">
+    
+        <div class="max-w-2xl relative w-full">
+    
+
+    
+
+    <input type="text" name="hero_badge" value="三重奉天宮 蘇府王爺廟｜2027 丁未年 點燈開放登記" class="border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-2xl " maxlength="60" id="id_hero_badge">
+
+
+    
+
+    
+</div>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 field-hero_title border-dashed border-base-200 lg:items-center group/line field-line flex-col px-3 grow group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark required" for="id_hero_title">主視覺標題<span class="text-red-600 dark:text-red-500">*</span></label>
+</div>
+
+<div class="grow relative">
+    
+        <div class="max-w-2xl relative w-full">
+    
+
+    
+
+    <input type="text" name="hero_title" value="蘇府王爺護佑
+線上點燈登記" class="border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-2xl " maxlength="60" required id="id_hero_title">
+
+
+    
+
+    
+</div>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed border-base-200 lg:items-center group/line field-line flex-col px-3 grow group field-hero_text dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_hero_text">主視覺說明</label>
+</div>
+
+<div class="grow relative">
+    
+        <textarea name="hero_text" cols="40" rows="10" class="vLargeTextField border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-4xl appearance-none " id="id_hero_text">不必親自到宮，即可為自己與家人安燈祈福。填寫信眾資料、選擇付款方式，廟方核對入帳後即完成登記，可隨時以訂單編號查詢進度。</textarea>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row last">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 field-announcement border-dashed border-base-200 lg:items-center group/line field-line flex-col px-3 grow group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_announcement">公告橫幅</label>
+</div>
+
+<div class="grow relative">
+    
+        <div class="max-w-2xl relative w-full">
+    
+
+    
+
+    <input type="text" name="announcement" value="每年農曆四月十二日恭祝蘇府王爺聖誕千秋，當晚擲選次年度值年爐主、事首，有意擲選之善信請至本宮登記。" class="border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-2xl " maxlength="200" id="id_announcement">
+
+
+    
+
+    
+</div>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+    </div>
+
+    
+</fieldset>
+
+                            
+                        
+                            
+                                
+
+<fieldset class="module relative  " x-show="activeTab == 'general'">
+    
+
+    
+        <h2 class="bg-base-100 flex flex-row font-semibold h-[38px] gap-1 items-center mb-4 px-3 rounded-default text-important dark:bg-white/[.02]  " >
+    
+        關於本宮
+    
+
+    
+
+</h2>
+
+    
+
+    
+
+    
+
+    <div class="aligned overflow-hidden shadow-xs form-rows border-base-200 border rounded-default dark:border-base-800">
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 field-history border-dashed border-base-200 lg:items-center group/line field-line flex-col px-3 grow group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_history">沿革</label>
+</div>
+
+<div class="grow relative">
+    
+        <textarea name="history" cols="40" rows="10" class="vLargeTextField border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-4xl appearance-none " id="id_history">三重奉天宮蘇府王爺廟主祀蘇府大王爺，每年農曆四月十二日恭祝蘇府王爺聖誕千秋，並於當晚擲選次年度值年爐主、事首。
+
+【宮廟沿革、創建年代與重修歷程（待客戶提供）】</textarea>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed border-base-200 lg:items-center group/line field-line flex-col px-3 grow field-main_deity group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_main_deity">主祀神明</label>
+</div>
+
+<div class="grow relative">
+    
+        <div class="max-w-2xl relative w-full">
+    
+
+    
+
+    <input type="text" name="main_deity" value="蘇府大王爺" class="border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-2xl " maxlength="50" id="id_main_deity">
+
+
+    
+
+    
+</div>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed field-founded border-base-200 lg:items-center group/line field-line flex-col px-3 grow group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_founded">創建年代</label>
+</div>
+
+<div class="grow relative">
+    
+        <div class="max-w-2xl relative w-full">
+    
+
+    
+
+    <input type="text" name="founded" value="（待客戶提供）" class="border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-2xl " maxlength="50" id="id_founded">
+
+
+    
+
+    
+</div>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row last">
+    
+        
+            <div class="flex field-open_hours group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed border-base-200 lg:items-center group/line field-line flex-col px-3 grow group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_open_hours">開放時間</label>
+</div>
+
+<div class="grow relative">
+    
+        <div class="max-w-2xl relative w-full">
+    
+
+    
+
+    <input type="text" name="open_hours" value="（待客戶提供）" class="border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-2xl " maxlength="100" id="id_open_hours">
+
+
+    
+
+    
+</div>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+    </div>
+
+    
+</fieldset>
+
+                            
+                        
+                            
+                                
+
+<fieldset class="module relative  " x-show="activeTab == 'general'">
+    
+
+    
+        <h2 class="bg-base-100 flex flex-row font-semibold h-[38px] gap-1 items-center mb-4 px-3 rounded-default text-important dark:bg-white/[.02]  " >
+    
+        參訪引導
+    
+
+    
+
+</h2>
+
+    
+
+    
+
+    
+
+    <div class="aligned overflow-hidden shadow-xs form-rows border-base-200 border rounded-default dark:border-base-800">
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed border-base-200 field-map_embed_url lg:items-center group/line field-line flex-col px-3 grow group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_map_embed_url">Google 地圖嵌入網址</label>
+</div>
+
+<div class="grow relative">
+    
+        <div class="flex flex-col gap-2">
+    <input type="url" name="map_embed_url" class="border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-2xl " maxlength="1000" aria-describedby="id_map_embed_url_helptext" id="id_map_embed_url">
+
+
+    
+</div>
+    
+
+    
+        
+    <div class="leading-relaxed mt-2 text-xs">
+        Google 地圖 →分享→嵌入地圖，貼上 iframe 的 src 網址
+    </div>
+
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed border-base-200 field-transport lg:items-center group/line field-line flex-col px-3 grow group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_transport">大眾運輸</label>
+</div>
+
+<div class="grow relative">
+    
+        <textarea name="transport" cols="40" rows="10" class="vLargeTextField border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-4xl appearance-none " id="id_transport">（待客戶提供）</textarea>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex field-parking group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed border-base-200 lg:items-center group/line field-line flex-col px-3 grow group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_parking">自行開車・停車</label>
+</div>
+
+<div class="grow relative">
+    
+        <textarea name="parking" cols="40" rows="10" class="vLargeTextField border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-4xl appearance-none " id="id_parking">（待客戶提供）</textarea>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row last">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed border-base-200 lg:items-center group/line field-line flex-col px-3 grow field-etiquette group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_etiquette">參拜禮儀</label>
+</div>
+
+<div class="grow relative">
+    
+        <textarea name="etiquette" cols="40" rows="10" class="vLargeTextField border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-4xl appearance-none " id="id_etiquette">（待客戶提供）</textarea>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+    </div>
+
+    
+</fieldset>
+
+                            
+                        
+                            
+                                
+
+<fieldset class="module relative  " x-show="activeTab == 'general'">
+    
+
+    
+        <h2 class="bg-base-100 flex flex-row font-semibold h-[38px] gap-1 items-center mb-4 px-3 rounded-default text-important dark:bg-white/[.02]  " >
+    
+        付款資訊
+    
+
+    
+
+</h2>
+
+    
+
+    
+
+    
+
+    <div class="aligned overflow-hidden shadow-xs form-rows border-base-200 border rounded-default dark:border-base-800">
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 field-bank_name border-dashed border-base-200 lg:items-center group/line field-line flex-col px-3 grow group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_bank_name">銀行名稱</label>
+</div>
+
+<div class="grow relative">
+    
+        <div class="max-w-2xl relative w-full">
+    
+
+    
+
+    <input type="text" name="bank_name" value="○○銀行" class="border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-2xl " maxlength="50" id="id_bank_name">
+
+
+    
+
+    
+</div>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed border-base-200 field-bank_code lg:items-center group/line field-line flex-col px-3 grow group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_bank_code">銀行代碼</label>
+</div>
+
+<div class="grow relative">
+    
+        <div class="max-w-2xl relative w-full">
+    
+
+    
+
+    <input type="text" name="bank_code" value="000" class="border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-2xl " maxlength="10" id="id_bank_code">
+
+
+    
+
+    
+</div>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed border-base-200 lg:items-center group/line field-line flex-col px-3 grow field-bank_account group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_bank_account">帳號</label>
+</div>
+
+<div class="grow relative">
+    
+        <div class="max-w-2xl relative w-full">
+    
+
+    
+
+    <input type="text" name="bank_account" value="0000-000-000000" class="border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-2xl " maxlength="30" id="id_bank_account">
+
+
+    
+
+    
+</div>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed field-bank_holder border-base-200 lg:items-center group/line field-line flex-col px-3 grow group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_bank_holder">戶名</label>
+</div>
+
+<div class="grow relative">
+    
+        <div class="max-w-2xl relative w-full">
+    
+
+    
+
+    <input type="text" name="bank_holder" value="財團法人○○宮" class="border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-2xl " maxlength="60" id="id_bank_holder">
+
+
+    
+
+    
+</div>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed border-base-200 lg:items-center group/line field-line flex-col px-3 grow field-line_id group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_line_id">官方 LINE ID</label>
+</div>
+
+<div class="grow relative">
+    
+        <div class="max-w-2xl relative w-full">
+    
+
+    
+
+    <input type="text" name="line_id" value="@temple-demo" class="border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-2xl " maxlength="50" id="id_line_id">
+
+
+    
+
+    
+</div>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 field-line_url border-dashed border-base-200 lg:items-center group/line field-line flex-col px-3 grow group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_line_url">加好友連結</label>
+</div>
+
+<div class="grow relative">
+    
+        <div class="flex flex-col gap-2">
+    <input type="url" name="line_url" class="border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-2xl " maxlength="200" id="id_line_url">
+
+
+    
+</div>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed border-base-200 field-line_qr lg:items-center group/line field-line flex-col px-3 grow group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_line_qr">官方 LINE QR Code</label>
+</div>
+
+<div class="grow relative">
+    
+        <div class="bg-white border border-base-200 flex grow items-center overflow-hidden rounded-default shadow-xs max-w-2xl focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-primary-600 group-[.errors]:border-red-600 focus-within:group-[.errors]:outline-red-500 dark:bg-base-900 dark:border-base-700 dark:group-[.errors]:border-red-500 dark:focus-within:group-[.errors]:outline-red-500">
+    
+
+    <label for="id_line_qr" class="flex grow relative">
+        <input type="text" aria-label="Choose file to upload" value="Choose file to upload" disabled class="grow font-medium min-w-0 px-3 py-2 text-ellipsis">
+        <span class="absolute cursor-pointer left-0 bottom-0 top-0 right-0"></span>
+    </label>
+
+    <div class="bg-white flex flex-none items-center leading-none self-stretch dark:bg-base-900">
+        <div class="opacity-0 overflow-hidden w-[0px]">
+            <input type="file" name="line_qr"  accept="image/*" id="id_line_qr" />
+        </div>
+
+        
+
+        <label for="id_line_qr" class="cursor-pointer text-base-400 px-3 hover:text-base-700 dark:text-base-500 dark:hover:text-base-200">
+            <span class="block material-symbols-outlined">upload</span>
+        </label>
+    </div>
+</div>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row last">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed border-base-200 field-pay_due_days lg:items-center group/line field-line flex-col px-3 grow group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark required" for="id_pay_due_days">付款期限（天）<span class="text-red-600 dark:text-red-500">*</span></label>
+</div>
+
+<div class="grow relative">
+    
+        <input type="number" name="pay_due_days" value="3" class="border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-2xl " min="0" required id="id_pay_due_days">
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+    </div>
+
+    
+</fieldset>
+
+                            
+                        
+                            
+                                
+
+<fieldset class="module relative  " x-show="activeTab == 'general'">
+    
+
+    
+        <h2 class="bg-base-100 flex flex-row font-semibold h-[38px] gap-1 items-center mb-4 px-3 rounded-default text-important dark:bg-white/[.02]  " >
+    
+        登記須知與條款
+    
+
+    
+
+</h2>
+
+    
+
+    
+
+    
+
+    <div class="aligned overflow-hidden shadow-xs form-rows border-base-200 border rounded-default dark:border-base-800">
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed border-base-200 field-registration_notice lg:items-center group/line field-line flex-col px-3 grow group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark required" for="id_registration_notice">登記須知<span class="text-red-600 dark:text-red-500">*</span></label>
+</div>
+
+<div class="grow relative">
+    
+        <textarea name="registration_notice" cols="40" rows="10" class="vLargeTextField border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-4xl appearance-none " required aria-describedby="id_registration_notice_helptext" id="id_registration_notice">填寫國曆生辰者，將由廟方轉為農曆生辰進行安奉。
+送出登記後，系統即提供一組訂單編號，請務必記下，供「登記查詢」使用。
+付款方式為銀行匯款或 LINE Pay，廟方人工核對入帳後即完成登記，約需 1–3 個工作天，可至「登記查詢」查看進度。
+匯款後請至「登記查詢」回填匯款帳號後五碼，以利廟方核對。
+逾付款期限未付款，登記將自動取消並釋出名額。
+廟方於確認入帳後 7 天內完成安奉作業，安燈照片可於「登記查詢」查看。
+如有疑問，請於服務時間來電洽詢。
+請務必確認填寫內容無誤再送出，送出後如需修改請來電洽詢。</textarea>
+    
+
+    
+        
+    <div class="leading-relaxed mt-2 text-xs">
+        一行一則，信眾開始填寫登記前需勾選同意。各服務的注意事項會一併列出。
+    </div>
+
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 field-terms_html border-dashed border-base-200 lg:items-center group/line field-line flex-col px-3 grow group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark required" for="id_terms_html">服務條款與個資告知（HTML）<span class="text-red-600 dark:text-red-500">*</span></label>
+</div>
+
+<div class="grow relative">
+    
+        <textarea name="terms_html" cols="40" rows="10" class="vLargeTextField border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-4xl appearance-none " required id="id_terms_html">&lt;h3&gt;服務條款&lt;/h3&gt;
+&lt;p&gt;本宮線上登記僅受理點燈、法會、樂捐等宗教服務，款項由本宮人工核對入帳後完成登記。逾期未付款之登記將自動取消。&lt;/p&gt;
+&lt;h3&gt;個人資料蒐集告知&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;蒐集目的：&lt;/strong&gt;宗教服務登記、疏文製作、結緣品寄送、收據開立與聯繫通知。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;個資類別：&lt;/strong&gt;姓名、手機、Email、農曆生辰、地址、身分證字號或統一編號（選填）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;利用期間、地區、對象與方式：&lt;/strong&gt;於蒐集目的存續期間及法定保存期間內，由本宮於中華民國境內以書面或電子方式利用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;當事人權利：&lt;/strong&gt;您可向本宮請求查詢、閱覽、製給複製本、補充或更正、停止蒐集處理利用或刪除您的個人資料。&lt;/p&gt;
+&lt;p&gt;（以上內容待廟方確認，可於後台「網站設定」修改。）&lt;/p&gt;</textarea>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row ">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed border-base-200 lg:items-center group/line field-line flex-col px-3 grow field-taisui_year_label group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark" for="id_taisui_year_label">太歲年度說明</label>
+</div>
+
+<div class="grow relative">
+    
+        <div class="max-w-2xl relative w-full">
+    
+
+    
+
+    <input type="text" name="taisui_year_label" value="2027 丁未年" class="border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-2xl " maxlength="40" id="id_taisui_year_label">
+
+
+    
+
+    
+</div>
+    
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+            
+
+<div class="field-row group/row form-row last">
+    
+        
+            <div class="flex group-[.last]/row:border-b-0 lg:flex-row py-2.5 border-dashed border-base-200 lg:items-center group/line field-line flex-col px-3 grow field-taisui_animals group dark:border-base-800 min-h-[59px] border-b" >
+                
+                    
+                        <div class="lg:min-w-56 lg:w-56 lg:h-[38px] lg:flex lg:items-center lg:self-start lg:leading-[38px] lg:*:m-0">
+    <label class="block font-semibold mb-2 text-font-important-light text-sm dark:text-font-important-dark required" for="id_taisui_animals">犯太歲生肖<span class="text-red-600 dark:text-red-500">*</span></label>
+</div>
+
+<div class="grow relative">
+    
+        <textarea name="taisui_animals" cols="40" rows="10" class="vLargeTextField border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full max-w-4xl appearance-none " required aria-describedby="id_taisui_animals_helptext" id="id_taisui_animals">{&quot;值太歲&quot;: &quot;羊&quot;, &quot;沖太歲&quot;: &quot;牛&quot;, &quot;害太歲&quot;: &quot;鼠&quot;, &quot;刑太歲&quot;: &quot;狗&quot;}</textarea><input type="hidden" name="initial-taisui_animals" value="{&quot;值太歲&quot;: &quot;羊&quot;, &quot;沖太歲&quot;: &quot;牛&quot;, &quot;害太歲&quot;: &quot;鼠&quot;, &quot;刑太歲&quot;: &quot;狗&quot;}" aria-describedby="id_taisui_animals_helptext" id="initial-id_taisui_animals">
+    
+
+    
+        
+    <div class="leading-relaxed mt-2 text-xs">
+        格式：{"值太歲": "羊", "沖太歲": "牛", "害太歲": "鼠", "刑太歲": "狗"}，每年依本宮公告調整
+    </div>
+
+
+    
+
+    
+</div>
+
+                    
+                
+            </div>
+        
+    
+</div>
+
+        
+    </div>
+
+    
+</fieldset>
+
+                            
+                        
+
+                        
+
+
+    
+
+
+                    
+                
+
+                
+
+                
+                    
+                
+
+                
+
+                
+                    <script id="django-admin-form-add-constants" src="../../../../../static/admin/js/change_form.js" async></script>
+                
+
+                
+<script id="django-admin-prepopulated-fields-constants"
+        src="../../../../../static/admin/js/prepopulate_init.js"
+        data-prepopulated-fields="[]">
+</script>
+
+            </div>
+
+            
+        </form>
+
+        
+
+        
+
+        
+    </div>
+
+
+                    
+                </div>
+            </div>
+
+            
+    
+
+<div id="submit-row" class="relative lg:sticky lg:bottom-0 z-40">
+    <div class="rounded-b-default pb-4 px-4 lg:border-t lg:border-base-200 relative lg:scrollable-top lg:py-0 dark:border-base-800">
+        <div class="absolute inset-0 backdrop-blur-xs bg-white/80 dark:bg-base-900/80 z-10"></div>
+        <div class="flex flex-col-reverse gap-3 items-center relative mx-auto lg:flex-row-reverse container lg:h-[64px] z-20">
+            
+                
+                    <button  type="submit" form="sitesetting_form" name="_save"   
+
+class="font-medium inline-flex group items-center gap-1 relative rounded-default justify-center whitespace-nowrap cursor-pointer
+
+    px-3 py-2
+
+
+    border border-base-200 bg-primary-600 border-transparent text-white hover:bg-primary-600/80
+
+ w-full lg:w-auto" 
+ >
+
+
+
+                        儲存
+                    
+</button>
+
+                
+
+                
+
+                
+                    <button  type="submit" form="sitesetting_form" name="_continue"   
+
+class="font-medium inline-flex group items-center gap-1 relative rounded-default justify-center whitespace-nowrap cursor-pointer
+
+    px-3 py-2
+
+
+    border border-base-200 bg-white shadow-xs text-important dark:border-base-700 dark:bg-transparent hover:bg-base-100/80 dark:hover:bg-base-800/80
+
+ w-full lg:w-auto" 
+ >
+
+
+
+                        
+                            儲存並繼續編輯
+                        
+                    
+</button>
+
+                
+
+                
+
+                
+
+                <div class="flex flex-col gap-3 mr-auto w-full lg:flex-row lg:w-auto">
+                    
+
+                    
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+
+        </div>
+    </div>
+
+
+        <div id="modal-overlay" class="backdrop-blur-xs bg-base-900/20 bottom-0 fixed left-0 mr-1 right-0 top-0 z-60 dark:bg-base-900/80"
+     x-cloak
+     x-transition.opacity.duration.25ms
+     x-transition:leave.duration.0ms
+     x-show="openModal || shortcutsOpen || filterModalOpen || openCommandResults"
+     x-on:keydown.escape.window="openModal = shortcutsOpen = filterModalOpen = openCommandResults = false">
+</div>
+
+<div class="flex flex-col fixed inset-0 p-4 lg:p-32 z-[1000]"
+     x-cloak
+     x-show="openModal"
+     x-transition:enter
+     x-trap.noautofocus.noscroll="openModal"
+     x-on:keydown.escape.window="openModal = false">
+    <div id="modal-content" class="bg-white dark:bg-base-800 flex flex-col max-w-2xl min-h-0 mx-auto overflow-hidden rounded-default shadow-lg w-full" x-bind:class="modalContentClasses" x-on:click.outside="openModal = false"></div>
+</div>
+
+
+        
+
+
+    <div class="flex flex-col fixed inset-0 p-4 lg:p-32 z-[1000]" x-data="searchCommand()" x-show="openCommandResults" x-transition x-transition:leave.duration.0ms x-cloak x-on:opencommand.window="handleOpen()" x-on:keydown.window="handleShortcut($event)" x-trap.noautofocus.noscroll="openCommandResults">
+        <div class="bg-base-50 dark:bg-base-800 flex flex-col max-w-3xl min-h-0 mx-auto overflow-hidden rounded-default shadow-lg w-full" x-on:click.outside="handleOutsideClick()">
+            <div class="flex flex-row items-center px-4 w-full">
+                <button type="submit" id="command-submit" class="group flex items-center focus:outline-hidden">
+                    <span class="block material-symbols-outlined text-xl text-base-400 dark:text-base-500 group-[.htmx-request]:hidden">
+                        search
+                    </span>
+
+                    <span class="hidden material-symbols-outlined text-xl text-base-400 dark:text-base-500 group-[.htmx-request]:block animate-spin">
+                        progress_activity
+                    </span>
+                </button>
+
+                <input
+                    autocomplete="off"
+                    type="search"
+                    placeholder="Type to search"
+                    class="[&::-webkit-search-cancel-button]:hidden font-medium grow px-2 py-4 placeholder-text-subtle text-important focus:outline-hidden"
+                    name="s"
+                    id="search-input-command"
+                    x-ref="searchInputCommand"
+                    hx-indicator="#command-submit"
+                    x-on:keydown.escape.prevent="handleClear()"
+                    x-on:keydown.arrow-down.prevent="nextItem()"
+                    x-on:keydown.arrow-up.prevent="prevItem()"
+                    x-on:keydown.meta.enter.prevent="selectItem(false, true)"
+                    x-on:keydown.ctrl.enter.prevent="selectItem(false, true)"
+                    x-on:keydown.meta.k.prevent="handleOpen()"
+                    x-on:keydown.ctrl.k.prevent="handleOpen()"
+                    x-on:keydown.enter.prevent="if (!$event.metaKey && !$event.ctrlKey) selectItem(false, false)"
+                   
+                   
+                   
+                    hx-select-oob="#command-results-note"
+                    hx-target="#command-results">
+
+                <span class="material-symbols-outlined text-icon-action" x-on:click="handleClear()">
+                    close
+                </span>
+            </div>
+
+            <div class="bg-white border border-b-0 border-base-200 flex flex-col grow -mx-px min-h-0 rounded-default dark:border-base-700 dark:bg-white/[.04]">
+                <div class="grow h-full overflow-y-auto scrollbar-default" x-on:htmx:after-swap="handleContentLoaded($event)">
+                    <div id="command-results"></div>
+
+                    
+                </div>
+
+                
+
+<div class="border-base-200 flex flex-row gap-3 h-[52px] min-h-[52px] items-center px-4 py-2.5 text-subtle text-xs dark:border-base-700" x-bind:class="{'border-t': items !== undefined && items.length > 0}">
+    <div class="flex flex-row gap-2 items-center">
+        <div>
+            Navigate
+        </div>
+
+        <div class="flex flex-row gap-1 items-center">
+            <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+        <span class="material-symbols-outlined block leading-[18px] text-[14px]">
+            arrow_downward_alt
+        </span>
+    
+
+    
+</kbd>
+
+            <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+        <span class="material-symbols-outlined block leading-[18px] text-[14px]">
+            arrow_upward_alt
+        </span>
+    
+
+    
+</kbd>
+
+        </div>
+    </div>
+
+    <div class="flex flex-row gap-2 items-center">
+        <div>
+            Select
+        </div>
+
+        <div class="flex flex-row gap-1 items-center">
+            <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+        <span class="material-symbols-outlined block leading-[18px] text-[14px]">
+            keyboard_return
+        </span>
+    
+
+    
+</kbd>
+
+        </div>
+    </div>
+
+    <div class="flex flex-row gap-2 items-center">
+        <div>
+            清除
+        </div>
+
+        <div class="flex flex-row gap-1 items-center">
+            <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+
+    
+        <span class="block font-medium leading-[18px]">
+            esc
+        </span>
+    
+</kbd>
+
+        </div>
+    </div>
+
+    <div id="command-results-note" class="ml-auto"></div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+        
+
+
+    <div class="flex flex-col fixed inset-0 p-4 lg:p-32 z-[1000]" x-show="shortcutsOpen" x-transition x-transition:leave.duration.0ms x-cloak x-trap.noautofocus.noscroll="shortcutsOpen" x-on:keydown.escape.window="shortcutsOpen = false">
+        <div class="bg-white dark:bg-base-800 flex flex-col max-w-3xl min-h-0 mx-auto overflow-hidden rounded-default shadow-lg w-full" x-on:click.outside="shortcutsOpen = false">
+            <div class="border-b border-base-200 flex flex-col gap-2 px-4 py-3 dark:border-base-700">
+                <h1 class="font-semibold text-base text-important tracking-tight">
+                    Available shortcuts
+                </h1>
+            </div>
+
+            <div class="flex flex-col gap-4 p-4 overflow-y-auto scrollbar-default">
+                <div>
+                    <h2 class="font-semibold mb-2 text-important">
+                        Global shortcuts
+                    </h2>
+
+                    <ul class="border border-base-200 rounded-default shadow-xs dark:border-base-700 *:border-b *:border-base-200 *:last:border-b-0 *:flex *:flex-row *:justify-between *:items-center *:gap-2 *:px-3 *:py-2 *:last:border-b-0 dark:*:border-base-700">
+                        <li>
+                            <span>Open command tool</span>
+
+                            <span>
+                                
+                                    <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+        <span class="material-symbols-outlined block leading-[18px] text-[14px]">
+            keyboard_control_key
+        </span>
+    
+
+    
+        <span class="block font-medium leading-[18px]">
+            k
+        </span>
+    
+</kbd>
+
+                                
+                            </span>
+                        </li>
+
+                        <li>
+                            <span>Open shortcuts list</span>
+                            <span>
+                                <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+        <span class="material-symbols-outlined block leading-[18px] text-[14px]">
+            shift
+        </span>
+    
+
+    
+        <span class="block font-medium leading-[18px]">
+            ?
+        </span>
+    
+</kbd>
+
+                            </span>
+                        </li>
+
+                        <li>
+                            <span>Toggle sidebar</span>
+                            <span>
+                                <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+
+    
+        <span class="block font-medium leading-[18px]">
+            [
+        </span>
+    
+</kbd>
+
+                            </span>
+                        </li>
+
+                        <li>
+                            <span>Toggle dark/light mode</span>
+                            <span>
+                                
+                                    <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+        <span class="material-symbols-outlined block leading-[18px] text-[14px]">
+            keyboard_control_key
+        </span>
+    
+
+    
+        <span class="block font-medium leading-[18px]">
+            e
+        </span>
+    
+</kbd>
+
+                                
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="font-semibold mb-2 text-important">
+                        Changelist shortcuts
+                    </h2>
+
+                    <ul class="border border-base-200 rounded-default shadow-xs dark:border-base-700 *:border-b *:border-base-200 *:last:border-b-0 *:flex *:flex-row *:justify-between *:items-center *:gap-2 *:px-3 *:py-2 *:last:border-b-0 dark:*:border-base-700">
+                        <li>
+                            <span>Toggle filter</span>
+                            <span>
+                                <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+
+    
+        <span class="block font-medium leading-[18px]">
+            f
+        </span>
+    
+</kbd>
+
+                            </span>
+                        </li>
+
+                        <li>
+                            <span>Create new record</span>
+                            <span>
+                                <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+
+    
+        <span class="block font-medium leading-[18px]">
+            c
+        </span>
+    
+</kbd>
+
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="font-semibold mb-2 text-important">
+                        Command tool shortcuts
+                    </h2>
+
+                    <ul class="border border-base-200 rounded-default shadow-xs dark:border-base-700 *:border-b *:border-base-200 *:last:border-b-0 *:flex *:flex-row *:justify-between *:items-center *:gap-2 *:px-3 *:py-2 *:last:border-b-0 dark:*:border-base-700">
+                        <li>
+                            <span>
+                                Navigate
+                            </span>
+
+                            <span class="flex flex-row items-center gap-2">
+                                <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+        <span class="material-symbols-outlined block leading-[18px] text-[14px]">
+            arrow_downward_alt
+        </span>
+    
+
+    
+</kbd>
+
+                                <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+        <span class="material-symbols-outlined block leading-[18px] text-[14px]">
+            arrow_upward_alt
+        </span>
+    
+
+    
+</kbd>
+
+                            </span>
+                        </li>
+
+                        <li>
+                            <span>
+                                Open selection
+                            </span>
+
+                            <span>
+                                <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+        <span class="material-symbols-outlined block leading-[18px] text-[14px]">
+            keyboard_return
+        </span>
+    
+
+    
+</kbd>
+
+                            </span>
+                        </li>
+
+                        <li>
+                            <span>
+                                Open selection in new tab
+                            </span>
+
+                            <span>
+                                
+                                    <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+        <span class="material-symbols-outlined block leading-[18px] text-[14px]">
+            keyboard_control_keykeyboard_return
+        </span>
+    
+
+    
+</kbd>
+
+                                
+                            </span>
+                        </li>
+
+                        <li>
+                            <span>
+                                清除
+                            </span>
+
+                            <span>
+                                <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+
+    
+        <span class="block font-medium leading-[18px]">
+            esc
+        </span>
+    
+</kbd>
+
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+<meta name="robots" content="noindex,nofollow">
+<style>.pv-bar{position:fixed;left:12px;bottom:12px;z-index:9999;display:flex;gap:8px;align-items:center;
+background:#2A1A14;color:#FFF8EA;padding:8px 14px;border-radius:999px;font:14px/1.4 "Noto Sans TC",sans-serif;
+box-shadow:0 4px 16px rgba(0,0,0,.25)}.pv-bar a{color:#E8CF8A;text-decoration:underline}</style>
+<div class="pv-bar" role="note">預覽版・示範資料・表單不會送出　<a href="../../../../../_preview/index.html">頁面導覽</a></div>
+<script>
+var PV_ROOT = '../../../../../';
+document.addEventListener('htmx:afterSwap', function (e) {
+  e.detail.target.querySelectorAll('[data-pv-root]').forEach(function (el) {
+    ['href', 'src'].forEach(function (a) {
+      var v = el.getAttribute(a);
+      if (v && v.charAt(0) !== '#') el.setAttribute(a, PV_ROOT + v);
+    });
+    el.removeAttribute('data-pv-root');
+  });
+});
+document.addEventListener('submit', function (e) {
+  var to = e.target.getAttribute('data-preview-next');
+  e.preventDefault();
+  if (to) location.href = to; else alert('預覽版：此操作不會真的送出。');
+}, true);
+document.addEventListener('click', function (e) {
+  if (e.target.closest('a[data-preview-off]')) { e.preventDefault(); alert('預覽版未提供此頁面。'); }
+}, true);
+</script>
+</body>
+</html>

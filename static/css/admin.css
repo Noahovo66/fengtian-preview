@@ -1,0 +1,17 @@
+/* /admin/（django-unfold）外觀對齊 /manage/：深紅側欄、米色文字、金色選取 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@900&display=swap");
+
+body { font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; font-size: 15px; }
+
+#nav-sidebar-inner { background: #3A0A0A !important; color: #E9D9BE; }
+#nav-sidebar-inner h2 { color: #E8CF8A !important; font-size: 13px; letter-spacing: .08em; }
+#nav-sidebar-inner hr { border-color: rgba(255, 255, 255, .1) !important; }
+#nav-sidebar-inner a { color: #E9D9BE !important; font-weight: 500; }
+#nav-sidebar-inner a:hover { background: rgba(255, 255, 255, .1); color: #fff !important; }
+#nav-sidebar-inner a.active { background: #E8CF8A !important; color: #3A0A0A !important; font-weight: 700; }
+#nav-sidebar-inner .material-symbols-outlined { color: inherit !important; }
+#nav-sidebar-inner [class*="border-"] { border-color: rgba(255, 255, 255, .1) !important; }
+/* 側欄頂部標題與底部帳號區 */
+#nav-sidebar-inner > div:first-child, #nav-sidebar-inner > div:last-child { color: #FFF8EA !important; }
+#nav-sidebar-inner > div:first-child *, #nav-sidebar-inner > div:last-child * { color: inherit; }
+#nav-sidebar-inner > div:first-child :not(.material-symbols-outlined) { font-family: "Noto Serif TC", serif; }

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+  <title>登入｜管理後台</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../static/css/app.css">
+</head>
+<body class="flex min-h-screen items-center justify-center bg-temple-night p-4">
+  <div class="w-full max-w-md rounded-xl bg-temple-card p-8 shadow-2xl">
+    <div class="mb-6 flex items-center gap-3">
+      <span class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-temple-red font-serif text-xl font-black text-temple-red"></span>
+      <div><strong class="font-serif text-2xl"></strong><div class="text-temple-muted">管理後台</div></div>
+    </div>
+    
+<form data-preview-next="../orders/index.html" method="post" class="space-y-4" novalidate>
+  <input type="hidden" name="csrfmiddlewaretoken" value="NFxipFdFO3dhhoefw6S2JbH9LLHXOmLh6BQJBdHvXJVhnqlvKLdzxq9AWqtZGOXI">
+  <input type="hidden" name="next" value="">
+  
+  <div><label class="fld-label" for="id_username">帳號</label><input class="fld" type="text" name="username" id="id_username" autocomplete="username" autofocus required value=""></div>
+  <div><label class="fld-label" for="id_password">密碼</label><input class="fld" type="password" name="password" id="id_password" autocomplete="current-password" required></div>
+  <button class="btn-primary w-full">登入</button>
+  <p class="text-sm text-temple-muted">登入後需輸入驗證 App 的 6 位數驗證碼（兩步驟驗證）。</p>
+</form>
+
+  </div>
+
+<meta name="robots" content="noindex,nofollow">
+<style>.pv-bar{position:fixed;left:12px;bottom:12px;z-index:9999;display:flex;gap:8px;align-items:center;
+background:#2A1A14;color:#FFF8EA;padding:8px 14px;border-radius:999px;font:14px/1.4 "Noto Sans TC",sans-serif;
+box-shadow:0 4px 16px rgba(0,0,0,.25)}.pv-bar a{color:#E8CF8A;text-decoration:underline}</style>
+<div class="pv-bar" role="note">預覽版・示範資料・表單不會送出　<a href="../../_preview/index.html">頁面導覽</a></div>
+<script>
+var PV_ROOT = '../../';
+document.addEventListener('htmx:afterSwap', function (e) {
+  e.detail.target.querySelectorAll('[data-pv-root]').forEach(function (el) {
+    ['href', 'src'].forEach(function (a) {
+      var v = el.getAttribute(a);
+      if (v && v.charAt(0) !== '#') el.setAttribute(a, PV_ROOT + v);
+    });
+    el.removeAttribute('data-pv-root');
+  });
+});
+document.addEventListener('submit', function (e) {
+  var to = e.target.getAttribute('data-preview-next');
+  e.preventDefault();
+  if (to) location.href = to; else alert('預覽版：此操作不會真的送出。');
+}, true);
+document.addEventListener('click', function (e) {
+  if (e.target.closest('a[data-preview-off]')) { e.preventDefault(); alert('預覽版未提供此頁面。'); }
+}, true);
+</script>
+</body></html>

@@ -1,0 +1,1730 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-hant" dir="ltr" class="light" x-data="theme('light')" x-bind="themeBindings" x-cloak>
+    <head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow">
+        <title> 選擇 最新消息 來修改 | 宮廟內容管理</title>
+
+        <link href="../../../static/unfold/fonts/inter/styles.css" rel="stylesheet">
+        <link href="../../../static/unfold/fonts/material-symbols/styles.css" rel="stylesheet">
+
+        
+            <link href="../../../static/css/admin.css" rel="stylesheet">
+        
+
+        
+
+        <link href="../../../static/unfold/css/styles.css" rel="stylesheet">
+
+        <script src="../../../static/unfold/js/alpine/alpine.anchor.js" defer></script>
+        <script src="../../../static/unfold/js/alpine/alpine.persist.js" defer></script>
+        <script src="../../../static/unfold/js/alpine/alpine.sort.js" defer></script>
+        <script src="../../../static/unfold/js/alpine/alpine.focus.js" defer></script>
+        <script src="../../../static/unfold/js/alpine/alpine.resize.js" defer></script>
+        <script src="../../../static/unfold/js/alpine/alpine.js" defer></script>
+        <script src="../../../static/unfold/js/htmx/htmx.js"></script>
+        <script src="../../../static/unfold/js/chart/chart.js"></script>
+
+        
+
+        
+    
+
+    <script src="../../jsi18n.js"></script>
+
+    
+
+    
+
+
+        
+    
+    <script src="../../../static/admin/js/vendor/jquery/jquery.min.js"></script>
+<script src="../../../static/admin/js/jquery.init.js"></script>
+<script src="../../../static/admin/js/core.js"></script>
+<script src="../../../static/admin/js/admin/RelatedObjectLookups.js"></script>
+<script src="../../../static/admin/js/actions.js"></script>
+<script src="../../../static/admin/js/urlify.js"></script>
+<script src="../../../static/admin/js/prepopulate.js"></script>
+<script src="../../../static/admin/js/vendor/xregexp/xregexp.min.js"></script>
+
+
+        <script src="../../../static/unfold/js/app.js"></script>
+
+        
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+        
+            <meta name="robots" content="NONE,NOARCHIVE">
+        
+    </head>
+
+    <body class="antialiased bg-base-50 font-sans text-font-default-light text-sm dark:bg-base-900 dark:text-font-default-dark  app-content model-news change-list" data-admin-utc-offset="28800" x-data="{ activeTab: 'general', }" x-init="activeTab = getCurrentTab() || 'general';">
+        
+            <style id="unfold-theme-colors">
+                :root {
+                    
+
+                    
+                        
+                            --color-base-50: rgb(244, 241, 236);
+                        
+                            --color-base-100: rgb(239, 230, 216);
+                        
+                            --color-base-200: rgb(226, 217, 204);
+                        
+                            --color-base-300: rgb(205, 189, 165);
+                        
+                            --color-base-400: rgb(183, 159, 124);
+                        
+                            --color-base-500: rgb(138, 115, 96);
+                        
+                            --color-base-600: rgb(107, 85, 71);
+                        
+                            --color-base-700: rgb(74, 52, 40);
+                        
+                            --color-base-800: rgb(58, 42, 32);
+                        
+                            --color-base-900: rgb(42, 26, 20);
+                        
+                            --color-base-950: rgb(26, 15, 11);
+                        
+                    
+                        
+                            --color-primary-50: rgb(253, 246, 236);
+                        
+                            --color-primary-100: rgb(250, 233, 214);
+                        
+                            --color-primary-200: rgb(240, 201, 168);
+                        
+                            --color-primary-300: rgb(222, 150, 120);
+                        
+                            --color-primary-400: rgb(196, 93, 77);
+                        
+                            --color-primary-500: rgb(164, 40, 36);
+                        
+                            --color-primary-600: rgb(142, 27, 27);
+                        
+                            --color-primary-700: rgb(116, 21, 21);
+                        
+                            --color-primary-800: rgb(94, 15, 15);
+                        
+                            --color-primary-900: rgb(70, 11, 11);
+                        
+                            --color-primary-950: rgb(58, 10, 10);
+                        
+                    
+                        
+                            --color-font-subtle-light: var(--color-base-500);
+                        
+                            --color-font-subtle-dark: var(--color-base-400);
+                        
+                            --color-font-default-light: var(--color-base-600);
+                        
+                            --color-font-default-dark: var(--color-base-300);
+                        
+                            --color-font-important-light: var(--color-base-900);
+                        
+                            --color-font-important-dark: var(--color-base-100);
+                        
+                    
+                }
+            </style>
+        
+
+        
+    <div id="page" class="flex max-w-full min-h-screen ">
+        
+            
+                
+
+<div class="relative z-60" x-bind:class="{'select-none': resizing}" x-on:mousemove.window="if (resizing) { sidebarWidth = Math.min(max, Math.max(min, $event.clientX)); localStorage.setItem('sidebarWidth', sidebarWidth); }" x-on:mouseup.window="resizing = false" x-data="{ min: 220, max: 360, resizing: false }">
+    <div class="fixed xl:relative " x-show="sidebarOpen" x-bind:style="`width: ${sidebarWidth}px`">
+        <div class="bg-base-50 relative z-30 dark:bg-base-900">
+            <div id="nav-sidebar" class="bg-base-50 border-e border-base-200 bottom-0 fixed max-h-screen top-0  dark:border-base-800 dark:bg-base-900 " x-bind:style="`width: ${sidebarWidth}px`">
+                
+                    
+
+<nav id="nav-sidebar-inner" class="bg-base-50 flex flex-col min-h-screen dark:text-font-default-dark dark:bg-base-950/20 ">
+    
+
+<div class="border-b border-base-200 flex gap-3 items-center h-[65px] mb-4 dark:border-base-800 px-3 ">
+    <div class="bg-transparent flex font-semibold gap-3 grow min-w-0 h-[64px] items-center px-3 "
+         
+    >
+        
+            
+
+
+    <a href="#" data-preview-off class="bg-primary-600 flex h-[38px] items-center justify-center rounded-default shrink-0 text-white text-xs w-[38px]">
+    <span class="material-symbols-outlined md-18">temple_buddhist</span>
+    </a>
+
+
+<div class="flex flex-col grow justify-center min-w-0">
+    <div class="text-important tracking-tight *:truncate xl:text-base">
+        
+    <div id="site-name" class="flex items-center">
+    
+        <a href="#" data-preview-off>
+            管理後台
+        </a>
+    
+
+    
+</div>
+
+
+    </div>
+
+    
+</div>
+
+        
+
+        
+    </div>
+
+    <span class="material-symbols-outlined block cursor-pointer h-[18px] xl:hidden! hover:text-base-700 dark:hover:text-base-200" x-on:click="sidebarToggle()">
+        close
+    </span>
+
+    
+
+
+
+</div>
+
+
+    
+
+
+
+
+    
+        
+
+
+    <div id="nav-sidebar-apps" class="h-0 grow overflow-auto scrollbar-default-hover">
+        
+            
+                
+
+                <div class="hidden mb-1.5 has-[ol]:has-[li]:block" >
+                    
+
+                    
+                        <h2 class="font-semibold flex flex-row group items-center mb-1 mx-3 py-1.5 px-3 select-none text-font-important-light text-sm dark:text-font-important-dark " >
+                            日常作業
+
+                            
+
+
+
+
+                            
+                        </h2>
+                    
+
+                    <ol class="flex flex-col px-6" >
+                        
+                            
+                                <li>
+                                    <a href="../../../manage/orders/index.html" class="flex h-[38px] items-center -mx-3 px-3 rounded-default hover:text-primary-600 dark:hover:text-primary-500 " >
+                                        
+                                            <span class="material-symbols-outlined md-18 mr-3 w-[18px]">
+                                                fact_check
+                                            </span>
+                                        
+
+                                        <span>訂單核對</span>
+
+                                        
+
+
+
+                                    </a>
+                                </li>
+                            
+                        
+                            
+                                <li>
+                                    <a href="../../../manage/services/index.html" class="flex h-[38px] items-center -mx-3 px-3 rounded-default hover:text-primary-600 dark:hover:text-primary-500 " >
+                                        
+                                            <span class="material-symbols-outlined md-18 mr-3 w-[18px]">
+                                                local_fire_department
+                                            </span>
+                                        
+
+                                        <span>服務項目設定</span>
+
+                                        
+
+
+
+                                    </a>
+                                </li>
+                            
+                        
+                    </ol>
+                </div>
+            
+        
+            
+                
+
+                <div class="hidden mb-1.5 has-[ol]:has-[li]:block" >
+                    
+
+                    
+                        <h2 class="font-semibold flex flex-row group items-center mb-1 mx-3 py-1.5 px-3 select-none text-font-important-light text-sm dark:text-font-important-dark " >
+                            網站內容
+
+                            
+
+
+
+
+                            
+                        </h2>
+                    
+
+                    <ol class="flex flex-col px-6" >
+                        
+                            
+                                <li>
+                                    <a href="../ceremony/index.html" class="flex h-[38px] items-center -mx-3 px-3 rounded-default hover:text-primary-600 dark:hover:text-primary-500 " >
+                                        
+                                            <span class="material-symbols-outlined md-18 mr-3 w-[18px]">
+                                                event
+                                            </span>
+                                        
+
+                                        <span>祭典法會</span>
+
+                                        
+
+
+
+                                    </a>
+                                </li>
+                            
+                        
+                            
+                                <li>
+                                    <a href="index.html" class="flex h-[38px] items-center -mx-3 px-3 rounded-default hover:text-primary-600 dark:hover:text-primary-500 bg-base-100 font-semibold text-primary-600 dark:bg-white/[.06] dark:text-primary-500 active" >
+                                        
+                                            <span class="material-symbols-outlined md-18 mr-3 w-[18px]">
+                                                campaign
+                                            </span>
+                                        
+
+                                        <span>最新消息</span>
+
+                                        
+
+
+
+                                    </a>
+                                </li>
+                            
+                        
+                            
+                                <li>
+                                    <a href="../album/index.html" class="flex h-[38px] items-center -mx-3 px-3 rounded-default hover:text-primary-600 dark:hover:text-primary-500 " >
+                                        
+                                            <span class="material-symbols-outlined md-18 mr-3 w-[18px]">
+                                                photo_library
+                                            </span>
+                                        
+
+                                        <span>活動花絮</span>
+
+                                        
+
+
+
+                                    </a>
+                                </li>
+                            
+                        
+                            
+                                <li>
+                                    <a href="../../core/sitesetting/1/change/index.html" class="flex h-[38px] items-center -mx-3 px-3 rounded-default hover:text-primary-600 dark:hover:text-primary-500 " >
+                                        
+                                            <span class="material-symbols-outlined md-18 mr-3 w-[18px]">
+                                                settings
+                                            </span>
+                                        
+
+                                        <span>網站設定</span>
+
+                                        
+
+
+
+                                    </a>
+                                </li>
+                            
+                        
+                    </ol>
+                </div>
+            
+        
+            
+                
+
+                <div class="hidden mb-1.5 has-[ol]:has-[li]:block" >
+                    
+
+                    
+                        <h2 class="font-semibold flex flex-row group items-center mb-1 mx-3 py-1.5 px-3 select-none text-font-important-light text-sm dark:text-font-important-dark " >
+                            系統
+
+                            
+
+
+
+
+                            
+                        </h2>
+                    
+
+                    <ol class="flex flex-col px-6" >
+                        
+                            
+                                <li>
+                                    <a href="../../auth/user/index.html" class="flex h-[38px] items-center -mx-3 px-3 rounded-default hover:text-primary-600 dark:hover:text-primary-500 " >
+                                        
+                                            <span class="material-symbols-outlined md-18 mr-3 w-[18px]">
+                                                group
+                                            </span>
+                                        
+
+                                        <span>帳號管理</span>
+
+                                        
+
+
+
+                                    </a>
+                                </li>
+                            
+                        
+                            
+                                <li>
+                                    <a href="../../core/auditlog/index.html" class="flex h-[38px] items-center -mx-3 px-3 rounded-default hover:text-primary-600 dark:hover:text-primary-500 " >
+                                        
+                                            <span class="material-symbols-outlined md-18 mr-3 w-[18px]">
+                                                history
+                                            </span>
+                                        
+
+                                        <span>稽核紀錄</span>
+
+                                        
+
+
+
+                                    </a>
+                                </li>
+                            
+                        
+                            
+                                <li>
+                                    <a href="#" data-preview-off class="flex h-[38px] items-center -mx-3 px-3 rounded-default hover:text-primary-600 dark:hover:text-primary-500 " >
+                                        
+                                            <span class="material-symbols-outlined md-18 mr-3 w-[18px]">
+                                                phonelink_lock
+                                            </span>
+                                        
+
+                                        <span>兩步驟驗證裝置</span>
+
+                                        
+
+
+
+                                    </a>
+                                </li>
+                            
+                        
+                    </ol>
+                </div>
+            
+        
+    </div>
+
+    
+
+
+
+
+
+    
+
+    <div class="border-t border-base-200 px-6 py-3 relative dark:border-base-800" x-data="{ openUserLinks: false }">
+    <nav class="absolute bg-white border border-base-200 flex flex-col leading-none py-1 rounded-default shadow-lg bottom-[73px] left-3 right-3 z-50 dark:bg-base-800 dark:border-base-700" x-cloak x-show="openUserLinks" x-transition x-on:click.outside="openUserLinks = false">
+        
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+
+        
+
+
+    <a href="../../../manage/orders/index.html" class="mx-1 px-3 py-2 rounded-default hover:bg-base-100 hover:text-base-700 dark:hover:bg-base-700 dark:hover:text-base-200">
+        檢視網站
+    </a>
+
+
+
+    
+        <a href="#" data-preview-off class="mx-1 px-3 py-2 rounded-default hover:bg-base-100 hover:text-base-700 dark:hover:bg-base-700 dark:hover:text-base-200">
+            修改密碼
+        </a>
+    
+
+
+<div class="border-t border-base-200 mt-1 pt-1 dark:border-base-700">
+    <form id="logout-form" method="post" data-preview-next="" class="mx-1">
+        <input type="hidden" name="csrfmiddlewaretoken" value="PR4j9iWTjjpz2r8myhKNFVzzwaUyF19J9apHd1vq3fugWusY5vdJEvisep7wseOe">
+
+        <button type="submit" class="bg-none flex cursor-pointer items-center px-3 py-1.5 text-left text-red-700 rounded-default w-full hover:bg-red-100 dark:hover:bg-red-500/20 dark:text-red-400 dark:hover:text-red-400">
+            登出 <span class="ml-auto material-symbols-outlined text-red-700 dark:text-red-400">logout</span>
+        </button>
+    </form>
+</div>
+
+    </nav>
+
+    <div class="cursor-pointer flex flex-row gap-3 items-center min-h-[64px] -mx-6 -my-3 px-6 py-3 hover:bg-base-100 dark:hover:bg-base-800"
+         x-on:click="if (!$event.target.closest('a')) { openUserLinks = !openUserLinks }"
+         x-bind:class="{'bg-base-100 dark:bg-base-800': openUserLinks}">
+        
+    <div class="bg-base-200 bg-cover bg-no-repeat bg-center font-semibold flex items-center justify-center relative select-none text-important dark:bg-base-700 after:absolute after:inset-0 after:inset-ring after:inset-ring-base-800/10 dark:after:inset-ring-base-200/10
+                
+                    h-[38px] min-w-[38px] w-[38px]
+                
+                rounded-default after:rounded-default"
+         >
+        
+            A
+        
+
+        
+    </div>
+
+
+
+        <div class="flex flex-col select-none min-w-0">
+            <div class="font-semibold text-important tracking-tight truncate">
+                admin
+            </div>
+
+            
+                <div class="text-subtle text-xs truncate">
+                    admin@example.com
+                </div>
+            
+        </div>
+
+        <span class="material-symbols-outlined ml-auto select-none text-font-default-light dark:text-font-default-dark">
+            unfold_more
+        </span>
+    </div>
+</div>
+
+</nav>
+
+                
+
+                <div class="absolute bottom-0 cursor-col-resize flex group items-center justify-center right-[-3px] top-0 resize w-[7px]" x-on:mousedown="resizing = true">
+                    <div class="h-full w-[3px] transition-colors group-hover:bg-base-300 group-hover:dark:bg-base-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+        
+
+        <div id="main" class="bg-white flex flex-col grow min-w-0 dark:bg-base-900 ">
+            
+                
+
+<div class="bg-white border-b border-base-200 mb-4 px-4 z-40 dark:bg-base-900 dark:border-base-800 dark:text-font-default-dark ">
+    <div class="container flex items-center h-16 mx-auto py-4 ">
+        <div id="header-inner" class="flex items-center relative w-full">
+            <div class="flex items-center w-full">
+                
+                    
+                        
+                            
+
+<div class="flex flex-row grow font-semibold items-center min-w-0 mr-3">
+    
+        <span class="cursor-pointer flex flex-row items-center">
+            <span class="material-symbols-outlined" x-on:click="sidebarToggle()">
+                dock_to_right
+            </span>
+        </span>
+
+        <span class="block bg-base-200 h-5 mx-3 w-px dark:bg-base-700"></span>
+    
+
+    
+        
+
+
+
+    
+
+    <h1 class="overflow-hidden leading-5 text-important flex items-center whitespace-nowrap xl:text-base">
+        <a href="#" data-preview-off class="align-middle inline-block leading-5 min-w-0 truncate tracking-tight">
+        網站內容
+        </a ><span class="material-symbols-outlined inline-block align-middle leading-5 mx-2 text-base-400 dark:text-base-500">chevron_right</span><a href="index.html" class="align-middle inline-block leading-5 min-w-0 truncate tracking-tight">
+        最新消息
+        </a >
+
+
+        
+    </h1>
+</div>
+
+                        
+
+                        
+                            
+
+
+    <div class="flex flex-row gap-3 items-center ml-auto">
+        
+
+        
+
+
+
+
+        
+            
+    
+        
+            
+    
+        
+
+
+    
+    
+
+
+
+    
+        <div class="flex flex-row items-center">
+            <a href="#" data-preview-off class="addlink border border-primary-700 bg-primary-600 flex items-center h-[38px] justify-center -my-1 rounded-default w-[38px] hover:bg-primary-600/80 dark:border-primary-500" title="新增 最新消息">
+                <span class="material-symbols-outlined text-white">add</span>
+            </a>
+        </div>
+    
+
+
+    
+
+
+        
+    
+
+        
+    </div>
+
+
+                        
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+
+            
+                
+            
+
+            <div class="@container px-4 pb-4 grow">
+                <div id="content" class="container mx-auto  ">
+                    
+                        
+
+                    
+
+                    
+    <div id="content-main">
+        
+
+        <div class="flex -mx-4 module filtered" id="changelist" x-data="{ changeListWidth: 0 }">
+            <div class="result-list-wrapper changelist-form-container flex flex-row grow gap-4 min-w-0 px-4">
+                <div class="grow min-w-0" x-resize="changeListWidth = $width">
+                    
+                        
+                    
+
+                    
+
+                    <div class="flex flex-col flex-wrap gap-3 mb-4 sm:flex-row empty:hidden lg:border lg:border-base-200 lg:dark:border-base-800 lg:-mb-8 lg:p-3 lg:pb-11 lg:rounded-t-default"><div id="toolbar"><form id="changelist-search" method="get" role="search"><div class="bg-white border border-base-200 flex flex-row items-center px-3 rounded-default relative shadow-xs w-full focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-primary-600 lg:w-96 dark:bg-base-900 dark:border-base-700"><button type="submit" class="flex items-center focus:outline-hidden" id="searchbar-submit"><span class="material-symbols-outlined md-18 text-base-400 dark:text-base-500">search</span></button><input type="text"
+                       class="grow font-medium min-w-0 overflow-hidden p-2 placeholder-font-subtle-light truncate focus:outline-hidden dark:bg-base-900 dark:placeholder-font-subtle-dark dark:text-font-default-dark"
+                       name="q"
+                       value=""
+                       id="searchbar"
+                       placeholder="Type to search" /><kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700"><span class="block font-medium leading-[18px]">
+            /
+        </span></kbd></div></form></div><a class="filter-open-button bg-white border-base-200 hover:text-primary-600 dark:bg-base-900 dark:border-base-700 dark:hover:text-primary-500 border cursor-pointer flex font-medium gap-2 group items-center px-3 py-2 rounded-default shadow-xs text-sm lg:ml-auto md:mt-0 " x-on:click="filterOpen = true" x-on:keydown.escape.window="filterOpen = false">
+        Filters
+
+        <span class="material-symbols-outlined md-18 ml-auto">filter_list</span></a></div>
+
+                    <form id="changelist-form" class="group" method="post" novalidate>
+                        <input type="hidden" name="csrfmiddlewaretoken" value="PR4j9iWTjjpz2r8myhKNFVzzwaUyF19J9apHd1vq3fugWusY5vdJEvisep7wseOe">
+
+                        
+                            <input type="hidden" name="form-TOTAL_FORMS" value="5" id="id_form-TOTAL_FORMS"><input type="hidden" name="form-INITIAL_FORMS" value="5" id="id_form-INITIAL_FORMS"><input type="hidden" name="form-MIN_NUM_FORMS" value="0" id="id_form-MIN_NUM_FORMS"><input type="hidden" name="form-MAX_NUM_FORMS" value="1000" id="id_form-MAX_NUM_FORMS">
+                        
+
+                        
+                            
+
+
+    
+        <div class="bottom-0 right-0 hidden group-has-[input.action-select:checked]:flex fixed gap-3 lg:bottom-0 lg:h-[64px] items-center p-3 z-50 lg:flex-row" x-bind:style="{left: sidebarOpen ? sidebarWidth + 'px' : '0px'}">
+            <div id="changelist-actions-wrapper" class="grow group changelist-actions">
+                
+                    
+
+<div id="changelist-actions" class="actions mx-1 text-white mx-auto" x-bind:style="'width: ' + changeListWidth + 'px'">
+    <div class="bg-primary-600 flex flex-col gap-3 p-1.5 rounded-default dark:bg-primary-500 sm:flex-row sm:items-center lg:items-center">
+        
+            <div class="group primary flex flex-row gap-2 lg:flex-row" x-data="{action: '', selectAcross: 0}">
+                
+                    
+                        
+
+                        <div class="grow relative max-w-2xl">
+    <select name="action" class="border border-base-200 bg-white font-medium min-w-20 placeholder-base-400 rounded-default shadow-xs text-font-default-light text-sm focus:outline-2 focus:-outline-offset-2 focus:outline-primary-600 group-[.errors]:border-red-600 aria-invalid:border-red-600 focus:group-[.errors]:outline-red-600 focus:aria-invalid:outline-red-600 dark:bg-base-900 dark:border-base-700 dark:text-font-default-dark dark:group-[.errors]:border-red-500 dark:aria-invalid:border-red-500 dark:focus:group-[.errors]:outline-red-500 dark:focus:aria-invalid:outline-red-500 dark:scheme-dark group-[.primary]:border-transparent disabled:!bg-base-50 dark:disabled:!bg-base-800 px-3 py-2 w-full pr-8! max-w-2xl appearance-none text-ellipsis group-[.changelist-actions]:appearance-none group-[.changelist-actions]:!bg-white/20 group-[.changelist-actions]:font-medium group-[.changelist-actions]:grow group-[.changelist-actions]:px-2 group-[.changelist-actions]:py-1 group-[.changelist-actions]:pr-8 group-[.changelist-actions]:rounded-default group-[.changelist-actions]:!text-current group-[.changelist-actions]:truncate group-[.changelist-actions]:!outline-primary-400 group-[.changelist-actions]:dark:!outline-primary-700 group-[.changelist-actions]:*:text-base-700 group-[.changelist-actions]:lg:w-72" aria-label="Select action to run" x-init="action = $el.value" x-model="action" x-on:pageshow.window="action = $el.value" required>
+            <option value="" selected>Select action</option>
+
+            <option value="delete_selected">刪除所選的 最新消息</option>
+
+    </select>
+
+    <span class="material-symbols-outlined absolute group-[.primary]:text-white pointer-events-none mr-[12px] right-0 text-base-400 top-0 top-1/2 hover:text-base-700 dark:text-base-500 dark:hover:text-base-200 -translate-y-1/2">expand_more</span>
+</div>
+
+                        
+                    
+                        
+
+                        <input type="hidden" name="select_across" value="0" class="select-across" x-model="selectAcross">
+
+                        
+                    
+                
+
+                
+                    <button type="submit" x-show="action" class="bg-primary-900 cursor-pointer flex font-medium items-center justify-center px-3 py-1 rounded-default text-sm text-white whitespace-nowrap" title="執行選取的動作" name="index" value="0">
+                        Run
+                    </button>
+                
+            </div>
+
+            
+                
+                    <div class="flex grow flex-col sm:flex-row sm:items-center">
+                        <span class="action-counter" data-actions-icnt="5">
+                            5 中 0 個被選取
+                        </span>
+
+                        
+                    </div>
+                
+            
+        
+    </div>
+</div>
+
+                
+            </div>
+        </div>
+    
+
+
+
+                            
+
+
+    <div class="hiddenfields">
+        <input type="hidden" name="form-0-id" value="1" id="id_form-0-id"><input type="hidden" name="form-1-id" value="2" id="id_form-1-id"><input type="hidden" name="form-2-id" value="3" id="id_form-2-id"><input type="hidden" name="form-3-id" value="4" id="id_form-3-id"><input type="hidden" name="form-4-id" value="5" id="id_form-4-id">
+    </div>
+
+
+
+    <div class="rounded-default lg:rounded-t-none lg:rounded-b-default overflow-x-auto scrollbar-default border border-base-200 shadow-xs dark:border-base-800 bg-white dark:bg-base-900">
+        <table id="result_list" class="result-list border-spacing-none border-separate w-full" >
+            
+
+<thead>
+    <tr>
+        
+
+        
+
+        
+            <th class="align-middle font-semibold py-2 text-left text-important whitespace-nowrap action-checkbox-column pl-3 w-px" scope="col">
+                <div class="flex items-center ">
+                    <div class="text">
+                        
+                            
+                                <label class="flex flex-row items-center gap-2">
+                                    <input type="checkbox" name="action-toggle" id="action-toggle" class="appearance-none bg-white block border border-base-300 h-4 min-w-4 relative rounded-[4px] shadow-xs w-4 dark:bg-base-900 dark:border-base-700 dark:checked:after:text-white after:absolute after:content-[&#x27;check\_small&#x27;] after:flex! after:h-4 after:items-center after:justify-center after:leading-none after:material-symbols-outlined after:-ml-px after:-mt-px after:text-white after:w-4 dark:after:text-transparent checked:bg-primary-600 dark:checked:bg-primary-600 checked:border-primary-600 dark:checked:border-primary-600 action-toggle" aria-label="選擇此頁面上的所有物件執行操作">
+                                </label>
+                            
+                        
+                    </div>
+
+                    
+                </div>
+            </th>
+        
+            <th class="align-middle font-semibold py-2 text-left text-important whitespace-nowrap sortable column-title px-3" scope="col">
+                <div class="flex items-center ">
+                    <div class="text">
+                        
+                            <a href="index.html">
+                                標題
+                            </a>
+                        
+                    </div>
+
+                    
+                        
+                    
+                </div>
+            </th>
+        
+            <th class="align-middle font-semibold py-2 text-left text-important whitespace-nowrap sortable column-category px-3" scope="col">
+                <div class="flex items-center ">
+                    <div class="text">
+                        
+                            <a href="index.html">
+                                分類
+                            </a>
+                        
+                    </div>
+
+                    
+                        
+                    
+                </div>
+            </th>
+        
+            <th class="align-middle font-semibold py-2 text-left text-important whitespace-nowrap sortable column-publish_at sorted descending px-3" scope="col">
+                <div class="flex items-center ">
+                    <div class="text">
+                        
+                            <a href="index.html">
+                                發布時間
+                            </a>
+                        
+                    </div>
+
+                    
+                        
+                            <div class="sortoptions flex items-center ml-2">
+                                <a href="index.html" class="flex items-center leading-none text-base-400 hover:text-base-500 dark:text-base-500 dark:hover:text-base-400 toggle descending" title="切換排序">
+                                    
+                                        <span class="block material-symbols-outlined">arrow_circle_up</span>
+                                    
+                                </a>
+
+                                <a class="sortremove flex items-center leading-none ml-1 text-base-400 dark:text-base-500 transition-all hover:text-red-700 dark:hover:text-red-500" href="index.html" title="從排序中移除">
+                                    <span class="block material-symbols-outlined">cancel</span>
+                                </a>
+                            </div>
+
+                            
+                        
+                    
+                </div>
+            </th>
+        
+            <th class="align-middle font-semibold py-2 text-left text-important whitespace-nowrap sortable column-is_published px-3" scope="col">
+                <div class="flex items-center ">
+                    <div class="text">
+                        
+                            <a href="index.html">
+                                發布
+                            </a>
+                        
+                    </div>
+
+                    
+                        
+                    
+                </div>
+            </th>
+        
+    </tr>
+</thead>
+
+
+            
+                <tbody class="relative " x-data="{rowOpen: false}" >
+                    
+
+                    <tr class="data-row relative">
+                        
+
+                        
+
+                        
+                            <td class="action-checkbox align-middle pl-3 py-2 text-left border-t border-base-200 dark:border-base-800"><input type="checkbox" name="_selected_action" value="1" class="appearance-none bg-white block border border-base-300 h-4 min-w-4 relative rounded-[4px] shadow-xs w-4 dark:bg-base-900 dark:border-base-700 dark:checked:after:text-white after:absolute after:content-[&#x27;check\_small&#x27;] after:flex! after:h-4 after:items-center after:justify-center after:leading-none after:material-symbols-outlined after:-ml-px after:-mt-px after:text-white after:w-4 dark:after:text-transparent checked:bg-primary-600 dark:checked:bg-primary-600 checked:border-primary-600 dark:checked:border-primary-600 action-select" aria-label="Select record"></td>
+                        
+                            <th class="field-title align-middle border-t border-base-200 font-normal gap-4 items-center min-w-0 overflow-hidden px-3 py-1.5 h-[45px] text-left first:border-t dark:border-base-800"><a href="1/change/index.html" class="text-important" >2027 丁未年光明燈、太歲安奉即日起開放線上登記</a></th>
+                        
+                            <td class="field-category align-middle border-t border-base-200 font-normal gap-4 items-center min-w-0 overflow-hidden px-3 py-1.5 h-[45px] text-left first:border-t dark:border-base-800">點燈</td>
+                        
+                            <td class="field-publish_at align-middle border-t border-base-200 font-normal gap-4 items-center min-w-0 overflow-hidden px-3 py-1.5 h-[45px] text-left first:border-t dark:border-base-800 nowrap">2026年10月1日 09:00</td>
+                        
+                            <td class="field-is_published align-middle border-t border-base-200 font-normal gap-4 items-center min-w-0 overflow-hidden px-3 py-1.5 h-[45px] text-left first:border-t dark:border-base-800"><input type="checkbox" name="form-0-is_published" class="appearance-none bg-base-300 block cursor-pointer h-5 relative rounded-full w-8 min-w-8 disabled:cursor-not-allowed disabled:opacity-50 focus:outline-none after:absolute after:bg-white after:content-[&#x27;&#x27;] after:bg-red-300 after:h-3 after:rounded-full after:shadow-xs after:transition-all after:left-1 after:top-1 after:w-3 checked:bg-green-500 checked:after:left-4 dark:bg-base-600 dark:checked:bg-green-700 " id="id_form-0-is_published" checked>
+</td>
+                        
+
+                        
+
+
+
+                    </tr>
+
+                    
+                </tbody>
+            
+                <tbody class="relative bg-base-50 dark:bg-white/[.02]" x-data="{rowOpen: false}" >
+                    
+
+                    <tr class="data-row relative">
+                        
+
+                        
+
+                        
+                            <td class="action-checkbox align-middle pl-3 py-2 text-left border-t border-base-200 dark:border-base-800"><input type="checkbox" name="_selected_action" value="2" class="appearance-none bg-white block border border-base-300 h-4 min-w-4 relative rounded-[4px] shadow-xs w-4 dark:bg-base-900 dark:border-base-700 dark:checked:after:text-white after:absolute after:content-[&#x27;check\_small&#x27;] after:flex! after:h-4 after:items-center after:justify-center after:leading-none after:material-symbols-outlined after:-ml-px after:-mt-px after:text-white after:w-4 dark:after:text-transparent checked:bg-primary-600 dark:checked:bg-primary-600 checked:border-primary-600 dark:checked:border-primary-600 action-select" aria-label="Select record"></td>
+                        
+                            <th class="field-title align-middle border-t border-base-200 font-normal gap-4 items-center min-w-0 overflow-hidden px-3 py-1.5 h-[45px] text-left first:border-t dark:border-base-800"><a href="#" data-preview-off class="text-important" >下元禮斗法會報名須知與流程說明</a></th>
+                        
+                            <td class="field-category align-middle border-t border-base-200 font-normal gap-4 items-center min-w-0 overflow-hidden px-3 py-1.5 h-[45px] text-left first:border-t dark:border-base-800">法會</td>
+                        
+                            <td class="field-publish_at align-middle border-t border-base-200 font-normal gap-4 items-center min-w-0 overflow-hidden px-3 py-1.5 h-[45px] text-left first:border-t dark:border-base-800 nowrap">2026年9月20日 09:00</td>
+                        
+                            <td class="field-is_published align-middle border-t border-base-200 font-normal gap-4 items-center min-w-0 overflow-hidden px-3 py-1.5 h-[45px] text-left first:border-t dark:border-base-800"><input type="checkbox" name="form-1-is_published" class="appearance-none bg-base-300 block cursor-pointer h-5 relative rounded-full w-8 min-w-8 disabled:cursor-not-allowed disabled:opacity-50 focus:outline-none after:absolute after:bg-white after:content-[&#x27;&#x27;] after:bg-red-300 after:h-3 after:rounded-full after:shadow-xs after:transition-all after:left-1 after:top-1 after:w-3 checked:bg-green-500 checked:after:left-4 dark:bg-base-600 dark:checked:bg-green-700 " id="id_form-1-is_published" checked>
+</td>
+                        
+
+                        
+
+
+
+                    </tr>
+
+                    
+                </tbody>
+            
+                <tbody class="relative " x-data="{rowOpen: false}" >
+                    
+
+                    <tr class="data-row relative">
+                        
+
+                        
+
+                        
+                            <td class="action-checkbox align-middle pl-3 py-2 text-left border-t border-base-200 dark:border-base-800"><input type="checkbox" name="_selected_action" value="3" class="appearance-none bg-white block border border-base-300 h-4 min-w-4 relative rounded-[4px] shadow-xs w-4 dark:bg-base-900 dark:border-base-700 dark:checked:after:text-white after:absolute after:content-[&#x27;check\_small&#x27;] after:flex! after:h-4 after:items-center after:justify-center after:leading-none after:material-symbols-outlined after:-ml-px after:-mt-px after:text-white after:w-4 dark:after:text-transparent checked:bg-primary-600 dark:checked:bg-primary-600 checked:border-primary-600 dark:checked:border-primary-600 action-select" aria-label="Select record"></td>
+                        
+                            <th class="field-title align-middle border-t border-base-200 font-normal gap-4 items-center min-w-0 overflow-hidden px-3 py-1.5 h-[45px] text-left first:border-t dark:border-base-800"><a href="#" data-preview-off class="text-important" >線上登記付款方式說明：匯款與 LINE Pay</a></th>
+                        
+                            <td class="field-category align-middle border-t border-base-200 font-normal gap-4 items-center min-w-0 overflow-hidden px-3 py-1.5 h-[45px] text-left first:border-t dark:border-base-800">公告</td>
+                        
+                            <td class="field-publish_at align-middle border-t border-base-200 font-normal gap-4 items-center min-w-0 overflow-hidden px-3 py-1.5 h-[45px] text-left first:border-t dark:border-base-800 nowrap">2026年9月5日 09:00</td>
+                        
+                            <td class="field-is_published align-middle border-t border-base-200 font-normal gap-4 items-center min-w-0 overflow-hidden px-3 py-1.5 h-[45px] text-left first:border-t dark:border-base-800"><input type="checkbox" name="form-2-is_published" class="appearance-none bg-base-300 block cursor-pointer h-5 relative rounded-full w-8 min-w-8 disabled:cursor-not-allowed disabled:opacity-50 focus:outline-none after:absolute after:bg-white after:content-[&#x27;&#x27;] after:bg-red-300 after:h-3 after:rounded-full after:shadow-xs after:transition-all after:left-1 after:top-1 after:w-3 checked:bg-green-500 checked:after:left-4 dark:bg-base-600 dark:checked:bg-green-700 " id="id_form-2-is_published" checked>
+</td>
+                        
+
+                        
+
+
+
+                    </tr>
+
+                    
+                </tbody>
+            
+                <tbody class="relative bg-base-50 dark:bg-white/[.02]" x-data="{rowOpen: false}" >
+                    
+
+                    <tr class="data-row relative">
+                        
+
+                        
+
+                        
+                            <td class="action-checkbox align-middle pl-3 py-2 text-left border-t border-base-200 dark:border-base-800"><input type="checkbox" name="_selected_action" value="4" class="appearance-none bg-white block border border-base-300 h-4 min-w-4 relative rounded-[4px] shadow-xs w-4 dark:bg-base-900 dark:border-base-700 dark:checked:after:text-white after:absolute after:content-[&#x27;check\_small&#x27;] after:flex! after:h-4 after:items-center after:justify-center after:leading-none after:material-symbols-outlined after:-ml-px after:-mt-px after:text-white after:w-4 dark:after:text-transparent checked:bg-primary-600 dark:checked:bg-primary-600 checked:border-primary-600 dark:checked:border-primary-600 action-select" aria-label="Select record"></td>
+                        
+                            <th class="field-title align-middle border-t border-base-200 font-normal gap-4 items-center min-w-0 overflow-hidden px-3 py-1.5 h-[45px] text-left first:border-t dark:border-base-800"><a href="#" data-preview-off class="text-important" >中元普度法會圓滿，感謝十方信眾護持</a></th>
+                        
+                            <td class="field-category align-middle border-t border-base-200 font-normal gap-4 items-center min-w-0 overflow-hidden px-3 py-1.5 h-[45px] text-left first:border-t dark:border-base-800">活動</td>
+                        
+                            <td class="field-publish_at align-middle border-t border-base-200 font-normal gap-4 items-center min-w-0 overflow-hidden px-3 py-1.5 h-[45px] text-left first:border-t dark:border-base-800 nowrap">2026年8月18日 09:00</td>
+                        
+                            <td class="field-is_published align-middle border-t border-base-200 font-normal gap-4 items-center min-w-0 overflow-hidden px-3 py-1.5 h-[45px] text-left first:border-t dark:border-base-800"><input type="checkbox" name="form-3-is_published" class="appearance-none bg-base-300 block cursor-pointer h-5 relative rounded-full w-8 min-w-8 disabled:cursor-not-allowed disabled:opacity-50 focus:outline-none after:absolute after:bg-white after:content-[&#x27;&#x27;] after:bg-red-300 after:h-3 after:rounded-full after:shadow-xs after:transition-all after:left-1 after:top-1 after:w-3 checked:bg-green-500 checked:after:left-4 dark:bg-base-600 dark:checked:bg-green-700 " id="id_form-3-is_published" checked>
+</td>
+                        
+
+                        
+
+
+
+                    </tr>
+
+                    
+                </tbody>
+            
+                <tbody class="relative " x-data="{rowOpen: false}" >
+                    
+
+                    <tr class="data-row relative">
+                        
+
+                        
+
+                        
+                            <td class="action-checkbox align-middle pl-3 py-2 text-left border-t border-base-200 dark:border-base-800"><input type="checkbox" name="_selected_action" value="5" class="appearance-none bg-white block border border-base-300 h-4 min-w-4 relative rounded-[4px] shadow-xs w-4 dark:bg-base-900 dark:border-base-700 dark:checked:after:text-white after:absolute after:content-[&#x27;check\_small&#x27;] after:flex! after:h-4 after:items-center after:justify-center after:leading-none after:material-symbols-outlined after:-ml-px after:-mt-px after:text-white after:w-4 dark:after:text-transparent checked:bg-primary-600 dark:checked:bg-primary-600 checked:border-primary-600 dark:checked:border-primary-600 action-select" aria-label="Select record"></td>
+                        
+                            <th class="field-title align-middle border-t border-base-200 font-normal gap-4 items-center min-w-0 overflow-hidden px-3 py-1.5 h-[45px] text-left first:border-t dark:border-base-800"><a href="#" data-preview-off class="text-important" >恭祝蘇府王爺聖誕千秋・丁未年值年爐主事首擲選</a></th>
+                        
+                            <td class="field-category align-middle border-t border-base-200 font-normal gap-4 items-center min-w-0 overflow-hidden px-3 py-1.5 h-[45px] text-left first:border-t dark:border-base-800">法會</td>
+                        
+                            <td class="field-publish_at align-middle border-t border-base-200 font-normal gap-4 items-center min-w-0 overflow-hidden px-3 py-1.5 h-[45px] text-left first:border-t dark:border-base-800 nowrap">2026年5月1日 09:00</td>
+                        
+                            <td class="field-is_published align-middle border-t border-base-200 font-normal gap-4 items-center min-w-0 overflow-hidden px-3 py-1.5 h-[45px] text-left first:border-t dark:border-base-800"><input type="checkbox" name="form-4-is_published" class="appearance-none bg-base-300 block cursor-pointer h-5 relative rounded-full w-8 min-w-8 disabled:cursor-not-allowed disabled:opacity-50 focus:outline-none after:absolute after:bg-white after:content-[&#x27;&#x27;] after:bg-red-300 after:h-3 after:rounded-full after:shadow-xs after:transition-all after:left-1 after:top-1 after:w-3 checked:bg-green-500 checked:after:left-4 dark:bg-base-600 dark:checked:bg-green-700 " id="id_form-4-is_published" checked>
+</td>
+                        
+
+                        
+
+
+
+                    </tr>
+
+                    
+                </tbody>
+            
+        </table>
+    </div>
+
+
+                        
+                    </form>
+
+                    
+                </div>
+
+                
+
+
+    
+        <div id="changelist-filter" class="flex inset-0 z-[1000] fixed shadow-xs " hx-preserve x-show="filterOpen" x-transition x-transition.opacity.duration.50ms x-transition:leave.duration.0ms >
+            <div id="changelist-filter-close" class="absolute inset-0 z-10 " x-on:click="filterOpen = false"></div>
+
+            <div class="bg-white flex ml-auto m-4 overflow-hidden rounded-default shadow-xs w-80 dark:bg-base-800 z-20 ">
+                <div class="grow h-full overflow-auto relative ">
+                    <div class="flex flex-col h-full outline-none " x-trap.noautofocus.noscroll="filterModalOpen">
+                    
+
+                    <div class="flex flex-col grow gap-4 overflow-auto scrollbar-default *:mb-0">
+                        <div class="flex flex-col gap-4 px-3 py-2.5  *:mb-0">
+                            
+                                
+
+<div class="flex gap-2 flex-col">
+    
+        <h3 class="font-semibold text-important">
+            
+                 以 分類
+            
+        </h3>
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    
+        
+            <ul class="border border-base-200 flex rounded-default shadow-xs dark:border-base-700 dark:bg-base-900 flex-col">
+                
+                    <li class="border-base-200 dark:border-base-700 border-b last:border-b-0 font-semibold text-primary-600 dark:text-primary-500 ">
+                        <a href="index.html" title="全部" class="block px-3 py-2 truncate hover:text-primary-600 dark:hover:text-primary-500">
+                            全部
+                        </a>
+                    </li>
+                
+                    <li class="border-base-200 dark:border-base-700 border-b last:border-b-0 hover:text-base-700 dark:hover:text-base-200">
+                        <a href="index.html" title="點燈" class="block px-3 py-2 truncate hover:text-primary-600 dark:hover:text-primary-500">
+                            點燈
+                        </a>
+                    </li>
+                
+                    <li class="border-base-200 dark:border-base-700 border-b last:border-b-0 hover:text-base-700 dark:hover:text-base-200">
+                        <a href="index.html" title="法會" class="block px-3 py-2 truncate hover:text-primary-600 dark:hover:text-primary-500">
+                            法會
+                        </a>
+                    </li>
+                
+                    <li class="border-base-200 dark:border-base-700 border-b last:border-b-0 hover:text-base-700 dark:hover:text-base-200">
+                        <a href="index.html" title="公告" class="block px-3 py-2 truncate hover:text-primary-600 dark:hover:text-primary-500">
+                            公告
+                        </a>
+                    </li>
+                
+                    <li class="border-base-200 dark:border-base-700 border-b last:border-b-0 hover:text-base-700 dark:hover:text-base-200">
+                        <a href="index.html" title="活動" class="block px-3 py-2 truncate hover:text-primary-600 dark:hover:text-primary-500">
+                            活動
+                        </a>
+                    </li>
+                
+            </ul>
+        
+    
+</div>
+
+                            
+                                
+
+<div class="flex gap-2 flex-col">
+    
+        <h3 class="font-semibold text-important">
+            
+                 以 發布
+            
+        </h3>
+    
+
+    
+        
+    
+        
+    
+        
+    
+
+    
+        
+            <ul class="border border-base-200 flex min-w-20 rounded-default shadow-xs text-default dark:border-base-700 w-full dark:bg-base-900">
+                
+                    <li class="basis-1/3 border-r border-base-200 grow truncate last:border-r-0 dark:border-base-700 font-semibold text-primary-600 dark:text-primary-500 ">
+                        <a href="index.html" title="全部" class="block py-2 text-center hover:text-primary-600 dark:hover:text-primary-500">
+                            全部
+                        </a>
+                    </li>
+                
+                    <li class="basis-1/3 border-r border-base-200 grow truncate last:border-r-0 dark:border-base-700 hover:text-base-700 dark:hover:text-base-200">
+                        <a href="index.html" title="是" class="block py-2 text-center hover:text-primary-600 dark:hover:text-primary-500">
+                            是
+                        </a>
+                    </li>
+                
+                    <li class="basis-1/3 border-r border-base-200 grow truncate last:border-r-0 dark:border-base-700 hover:text-base-700 dark:hover:text-base-200">
+                        <a href="index.html" title="否" class="block py-2 text-center hover:text-primary-600 dark:hover:text-primary-500">
+                            否
+                        </a>
+                    </li>
+                
+            </ul>
+        
+    
+</div>
+
+                            
+                        </div>
+                    </div>
+
+                    
+
+
+    <div class="bg-white border-t border-base-200 flex flex-col gap-2 px-3 py-2.5 dark:bg-base-800 dark:border-base-700 ">
+        
+
+        
+            <span id="changelist-filter-extra-actions" class="flex flex-row flex-wrap gap-2 items-center">
+                
+                    
+                        <a href="index.html"       
+
+class="font-medium inline-flex group items-center gap-1 relative rounded-default justify-center whitespace-nowrap cursor-pointer
+
+    px-3 py-2
+
+
+    border border-base-200 bg-white shadow-xs text-important dark:border-base-700 dark:bg-transparent hover:bg-base-100/80 dark:hover:bg-base-800/80
+
+ viewlink grow" 
+ >
+
+
+
+                            顯示計數
+                        
+</a>
+
+                    
+                
+
+                
+            </span>
+        
+    </div>
+
+
+                </div>
+            </div>
+        </div>
+        </div>
+    
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    
+                </div>
+            </div>
+
+            
+    
+        
+
+
+    <div class="px-4 lg:backdrop-blur-xs lg:bg-white/80 lg:dark:bg-base-900/80 lg:left-0 lg:right-0 lg:bottom-0 lg:sticky relative z-40 lg:border-t lg:border-base-200 lg:relative lg:scrollable-top lg:dark:border-base-800 ">
+        <div class="lg:flex lg:items-center container mx-auto">
+            
+
+<div class="flex flex-row grow items-center lg:h-[64px]">
+    
+        
+
+
+
+<div class="py-4">
+    
+
+    5
+
+    
+        最新消息
+    
+</div>
+
+    
+
+    
+
+    
+        <div class="ml-auto">
+            <button  type="submit" form="changelist-form" name="_save"   
+
+class="font-medium inline-flex group items-center gap-1 relative rounded-default justify-center whitespace-nowrap cursor-pointer
+
+    px-3 py-2
+
+
+    border border-base-200 bg-primary-600 border-transparent text-white hover:bg-primary-600/80
+
+ w-full" 
+ >
+
+
+
+                儲存
+            
+</button>
+
+        </div>
+    
+</div>
+
+        </div>
+    </div>
+
+
+    
+
+        </div>
+    </div>
+
+
+        <div id="modal-overlay" class="backdrop-blur-xs bg-base-900/20 bottom-0 fixed left-0 mr-1 right-0 top-0 z-60 dark:bg-base-900/80"
+     x-cloak
+     x-transition.opacity.duration.25ms
+     x-transition:leave.duration.0ms
+     x-show="openModal || shortcutsOpen || filterModalOpen || openCommandResults"
+     x-on:keydown.escape.window="openModal = shortcutsOpen = filterModalOpen = openCommandResults = false">
+</div>
+
+<div class="flex flex-col fixed inset-0 p-4 lg:p-32 z-[1000]"
+     x-cloak
+     x-show="openModal"
+     x-transition:enter
+     x-trap.noautofocus.noscroll="openModal"
+     x-on:keydown.escape.window="openModal = false">
+    <div id="modal-content" class="bg-white dark:bg-base-800 flex flex-col max-w-2xl min-h-0 mx-auto overflow-hidden rounded-default shadow-lg w-full" x-bind:class="modalContentClasses" x-on:click.outside="openModal = false"></div>
+</div>
+
+
+        
+
+
+    <div class="flex flex-col fixed inset-0 p-4 lg:p-32 z-[1000]" x-data="searchCommand()" x-show="openCommandResults" x-transition x-transition:leave.duration.0ms x-cloak x-on:opencommand.window="handleOpen()" x-on:keydown.window="handleShortcut($event)" x-trap.noautofocus.noscroll="openCommandResults">
+        <div class="bg-base-50 dark:bg-base-800 flex flex-col max-w-3xl min-h-0 mx-auto overflow-hidden rounded-default shadow-lg w-full" x-on:click.outside="handleOutsideClick()">
+            <div class="flex flex-row items-center px-4 w-full">
+                <button type="submit" id="command-submit" class="group flex items-center focus:outline-hidden">
+                    <span class="block material-symbols-outlined text-xl text-base-400 dark:text-base-500 group-[.htmx-request]:hidden">
+                        search
+                    </span>
+
+                    <span class="hidden material-symbols-outlined text-xl text-base-400 dark:text-base-500 group-[.htmx-request]:block animate-spin">
+                        progress_activity
+                    </span>
+                </button>
+
+                <input
+                    autocomplete="off"
+                    type="search"
+                    placeholder="Type to search"
+                    class="[&::-webkit-search-cancel-button]:hidden font-medium grow px-2 py-4 placeholder-text-subtle text-important focus:outline-hidden"
+                    name="s"
+                    id="search-input-command"
+                    x-ref="searchInputCommand"
+                    hx-indicator="#command-submit"
+                    x-on:keydown.escape.prevent="handleClear()"
+                    x-on:keydown.arrow-down.prevent="nextItem()"
+                    x-on:keydown.arrow-up.prevent="prevItem()"
+                    x-on:keydown.meta.enter.prevent="selectItem(false, true)"
+                    x-on:keydown.ctrl.enter.prevent="selectItem(false, true)"
+                    x-on:keydown.meta.k.prevent="handleOpen()"
+                    x-on:keydown.ctrl.k.prevent="handleOpen()"
+                    x-on:keydown.enter.prevent="if (!$event.metaKey && !$event.ctrlKey) selectItem(false, false)"
+                   
+                   
+                   
+                    hx-select-oob="#command-results-note"
+                    hx-target="#command-results">
+
+                <span class="material-symbols-outlined text-icon-action" x-on:click="handleClear()">
+                    close
+                </span>
+            </div>
+
+            <div class="bg-white border border-b-0 border-base-200 flex flex-col grow -mx-px min-h-0 rounded-default dark:border-base-700 dark:bg-white/[.04]">
+                <div class="grow h-full overflow-y-auto scrollbar-default" x-on:htmx:after-swap="handleContentLoaded($event)">
+                    <div id="command-results"></div>
+
+                    
+                </div>
+
+                
+
+<div class="border-base-200 flex flex-row gap-3 h-[52px] min-h-[52px] items-center px-4 py-2.5 text-subtle text-xs dark:border-base-700" x-bind:class="{'border-t': items !== undefined && items.length > 0}">
+    <div class="flex flex-row gap-2 items-center">
+        <div>
+            Navigate
+        </div>
+
+        <div class="flex flex-row gap-1 items-center">
+            <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+        <span class="material-symbols-outlined block leading-[18px] text-[14px]">
+            arrow_downward_alt
+        </span>
+    
+
+    
+</kbd>
+
+            <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+        <span class="material-symbols-outlined block leading-[18px] text-[14px]">
+            arrow_upward_alt
+        </span>
+    
+
+    
+</kbd>
+
+        </div>
+    </div>
+
+    <div class="flex flex-row gap-2 items-center">
+        <div>
+            Select
+        </div>
+
+        <div class="flex flex-row gap-1 items-center">
+            <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+        <span class="material-symbols-outlined block leading-[18px] text-[14px]">
+            keyboard_return
+        </span>
+    
+
+    
+</kbd>
+
+        </div>
+    </div>
+
+    <div class="flex flex-row gap-2 items-center">
+        <div>
+            清除
+        </div>
+
+        <div class="flex flex-row gap-1 items-center">
+            <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+
+    
+        <span class="block font-medium leading-[18px]">
+            esc
+        </span>
+    
+</kbd>
+
+        </div>
+    </div>
+
+    <div id="command-results-note" class="ml-auto"></div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+        
+
+
+    <div class="flex flex-col fixed inset-0 p-4 lg:p-32 z-[1000]" x-show="shortcutsOpen" x-transition x-transition:leave.duration.0ms x-cloak x-trap.noautofocus.noscroll="shortcutsOpen" x-on:keydown.escape.window="shortcutsOpen = false">
+        <div class="bg-white dark:bg-base-800 flex flex-col max-w-3xl min-h-0 mx-auto overflow-hidden rounded-default shadow-lg w-full" x-on:click.outside="shortcutsOpen = false">
+            <div class="border-b border-base-200 flex flex-col gap-2 px-4 py-3 dark:border-base-700">
+                <h1 class="font-semibold text-base text-important tracking-tight">
+                    Available shortcuts
+                </h1>
+            </div>
+
+            <div class="flex flex-col gap-4 p-4 overflow-y-auto scrollbar-default">
+                <div>
+                    <h2 class="font-semibold mb-2 text-important">
+                        Global shortcuts
+                    </h2>
+
+                    <ul class="border border-base-200 rounded-default shadow-xs dark:border-base-700 *:border-b *:border-base-200 *:last:border-b-0 *:flex *:flex-row *:justify-between *:items-center *:gap-2 *:px-3 *:py-2 *:last:border-b-0 dark:*:border-base-700">
+                        <li>
+                            <span>Open command tool</span>
+
+                            <span>
+                                
+                                    <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+        <span class="material-symbols-outlined block leading-[18px] text-[14px]">
+            keyboard_control_key
+        </span>
+    
+
+    
+        <span class="block font-medium leading-[18px]">
+            k
+        </span>
+    
+</kbd>
+
+                                
+                            </span>
+                        </li>
+
+                        <li>
+                            <span>Open shortcuts list</span>
+                            <span>
+                                <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+        <span class="material-symbols-outlined block leading-[18px] text-[14px]">
+            shift
+        </span>
+    
+
+    
+        <span class="block font-medium leading-[18px]">
+            ?
+        </span>
+    
+</kbd>
+
+                            </span>
+                        </li>
+
+                        <li>
+                            <span>Toggle sidebar</span>
+                            <span>
+                                <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+
+    
+        <span class="block font-medium leading-[18px]">
+            [
+        </span>
+    
+</kbd>
+
+                            </span>
+                        </li>
+
+                        <li>
+                            <span>Toggle dark/light mode</span>
+                            <span>
+                                
+                                    <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+        <span class="material-symbols-outlined block leading-[18px] text-[14px]">
+            keyboard_control_key
+        </span>
+    
+
+    
+        <span class="block font-medium leading-[18px]">
+            e
+        </span>
+    
+</kbd>
+
+                                
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="font-semibold mb-2 text-important">
+                        Changelist shortcuts
+                    </h2>
+
+                    <ul class="border border-base-200 rounded-default shadow-xs dark:border-base-700 *:border-b *:border-base-200 *:last:border-b-0 *:flex *:flex-row *:justify-between *:items-center *:gap-2 *:px-3 *:py-2 *:last:border-b-0 dark:*:border-base-700">
+                        <li>
+                            <span>Toggle filter</span>
+                            <span>
+                                <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+
+    
+        <span class="block font-medium leading-[18px]">
+            f
+        </span>
+    
+</kbd>
+
+                            </span>
+                        </li>
+
+                        <li>
+                            <span>Create new record</span>
+                            <span>
+                                <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+
+    
+        <span class="block font-medium leading-[18px]">
+            c
+        </span>
+    
+</kbd>
+
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="font-semibold mb-2 text-important">
+                        Command tool shortcuts
+                    </h2>
+
+                    <ul class="border border-base-200 rounded-default shadow-xs dark:border-base-700 *:border-b *:border-base-200 *:last:border-b-0 *:flex *:flex-row *:justify-between *:items-center *:gap-2 *:px-3 *:py-2 *:last:border-b-0 dark:*:border-base-700">
+                        <li>
+                            <span>
+                                Navigate
+                            </span>
+
+                            <span class="flex flex-row items-center gap-2">
+                                <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+        <span class="material-symbols-outlined block leading-[18px] text-[14px]">
+            arrow_downward_alt
+        </span>
+    
+
+    
+</kbd>
+
+                                <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+        <span class="material-symbols-outlined block leading-[18px] text-[14px]">
+            arrow_upward_alt
+        </span>
+    
+
+    
+</kbd>
+
+                            </span>
+                        </li>
+
+                        <li>
+                            <span>
+                                Open selection
+                            </span>
+
+                            <span>
+                                <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+        <span class="material-symbols-outlined block leading-[18px] text-[14px]">
+            keyboard_return
+        </span>
+    
+
+    
+</kbd>
+
+                            </span>
+                        </li>
+
+                        <li>
+                            <span>
+                                Open selection in new tab
+                            </span>
+
+                            <span>
+                                
+                                    <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+        <span class="material-symbols-outlined block leading-[18px] text-[14px]">
+            keyboard_control_keykeyboard_return
+        </span>
+    
+
+    
+</kbd>
+
+                                
+                            </span>
+                        </li>
+
+                        <li>
+                            <span>
+                                清除
+                            </span>
+
+                            <span>
+                                <kbd class="bg-base-50 border border-base-200 flex flex-row items-center font-sans h-[20px] min-w-[20px] justify-center text-xs text-subtle rounded-xs px-1 uppercase whitespace-nowrap dark:bg-white/[.04] dark:border-base-700">
+    
+
+    
+        <span class="block font-medium leading-[18px]">
+            esc
+        </span>
+    
+</kbd>
+
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+<meta name="robots" content="noindex,nofollow">
+<style>.pv-bar{position:fixed;left:12px;bottom:12px;z-index:9999;display:flex;gap:8px;align-items:center;
+background:#2A1A14;color:#FFF8EA;padding:8px 14px;border-radius:999px;font:14px/1.4 "Noto Sans TC",sans-serif;
+box-shadow:0 4px 16px rgba(0,0,0,.25)}.pv-bar a{color:#E8CF8A;text-decoration:underline}</style>
+<div class="pv-bar" role="note">預覽版・示範資料・表單不會送出　<a href="../../../_preview/index.html">頁面導覽</a></div>
+<script>
+var PV_ROOT = '../../../';
+document.addEventListener('htmx:afterSwap', function (e) {
+  e.detail.target.querySelectorAll('[data-pv-root]').forEach(function (el) {
+    ['href', 'src'].forEach(function (a) {
+      var v = el.getAttribute(a);
+      if (v && v.charAt(0) !== '#') el.setAttribute(a, PV_ROOT + v);
+    });
+    el.removeAttribute('data-pv-root');
+  });
+});
+document.addEventListener('submit', function (e) {
+  var to = e.target.getAttribute('data-preview-next');
+  e.preventDefault();
+  if (to) location.href = to; else alert('預覽版：此操作不會真的送出。');
+}, true);
+document.addEventListener('click', function (e) {
+  if (e.target.closest('a[data-preview-off]')) { e.preventDefault(); alert('預覽版未提供此頁面。'); }
+}, true);
+</script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>訂單核對｜三重奉天宮</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../static/css/app.css">
+  <script src="../../../static/vendor/htmx.min.js" defer></script>
+</head>
+<body class="bg-temple-admin text-[15px]" hx-headers='{"X-CSRFToken": "7b7lOzFTCYlIKkCe9JxMqPCwDb7gqignrusJSieqmUqpEnWQGX0IpplplqkedvVS"}'>
+<div class="flex min-h-screen flex-col md:flex-row">
+  <aside class="flex flex-col gap-1 bg-temple-night px-4 py-5 text-[#E9D9BE] md:w-60 md:shrink-0">
+    <div class="flex items-center justify-between gap-2 px-2 pb-4">
+      <a href="../index.html" class="flex items-center gap-3 text-[#E9D9BE] no-underline">
+        <span class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-temple-goldlt font-serif font-black text-temple-goldlt">宮</span>
+        <span class="flex flex-col leading-tight"><strong class="font-serif text-lg text-temple-ivory">三重奉天宮</strong><span class="text-xs text-[#E9D9BE]">管理後台</span></span>
+      </a>
+    </div>
+    
+    
+    <nav class="flex flex-row flex-wrap gap-1 md:flex-col" aria-label="後台選單">
+      <a href="../index.html" class="rounded-md px-3 py-2.5 font-medium no-underline bg-temple-goldlt text-temple-night">訂單核對</a>
+      <a href="../../services/index.html" class="rounded-md px-3 py-2.5 font-medium no-underline text-[#E9D9BE] hover:bg-white/10 hover:text-white">服務項目設定</a>
+      <a href="../../../admin/content/ceremony/index.html" class="rounded-md px-3 py-2.5 font-medium text-[#E9D9BE] no-underline hover:bg-white/10 hover:text-white">祭典法會</a>
+      <a href="../../../admin/content/news/index.html" class="rounded-md px-3 py-2.5 font-medium text-[#E9D9BE] no-underline hover:bg-white/10 hover:text-white">最新消息</a>
+      <a href="../../../admin/content/album/index.html" class="rounded-md px-3 py-2.5 font-medium text-[#E9D9BE] no-underline hover:bg-white/10 hover:text-white">活動花絮</a>
+      <a href="../../../admin/core/sitesetting/1/change/index.html" class="rounded-md px-3 py-2.5 font-medium text-[#E9D9BE] no-underline hover:bg-white/10 hover:text-white">網站設定</a>
+      <a href="../../../admin/auth/user/index.html" class="rounded-md px-3 py-2.5 font-medium text-[#E9D9BE] no-underline hover:bg-white/10 hover:text-white">帳號管理</a>
+      <a href="../../../admin/core/auditlog/index.html" class="rounded-md px-3 py-2.5 font-medium text-[#E9D9BE] no-underline hover:bg-white/10 hover:text-white">稽核紀錄</a>
+    </nav>
+    
+    <div class="mt-auto hidden border-t border-white/10 px-2 pt-4 text-sm md:block">
+      <div>admin</div>
+      <form method="post" data-preview-next=""><input type="hidden" name="csrfmiddlewaretoken" value="7b7lOzFTCYlIKkCe9JxMqPCwDb7gqignrusJSieqmUqpEnWQGX0IpplplqkedvVS"><button class="mt-1 text-temple-goldlt underline">登出</button></form>
+      <a href="../../../index.html" target="_blank" class="mt-2 block text-temple-goldlt">開啟前台網站 ↗</a>
+    </div>
+  </aside>
+
+  <main class="min-w-0 flex-1 px-4 py-6 sm:px-8">
+    
+    
+<div class="flex flex-wrap items-center justify-between gap-3">
+  <div>
+    <h1 class="font-serif text-3xl font-black">訂單核對</h1>
+    <p class="text-temple-muted">比對網銀入帳或 LINE Pay 收款紀錄後，手動標記付款狀態</p>
+  </div>
+  
+  <div class="flex flex-wrap gap-2">
+    <a href="../../export/roster.xlsx.xlsx" class="btn-outline btn-sm">匯出點燈名冊 (Excel)</a>
+    <a href="../../export/orders.xlsx.xlsx" class="btn-primary btn-sm">匯出訂單</a>
+  </div>
+  
+</div>
+
+<!-- 統計卡 -->
+<div class="mt-5 grid grid-cols-2 gap-3 lg:grid-cols-4">
+  <div class="rounded-xl border border-[#E2D9CC] bg-white p-4"><div class="text-temple-muted">待核對</div><div class="text-3xl font-bold text-[#8A3F00]">3</div></div>
+  <div class="rounded-xl border border-[#E2D9CC] bg-white p-4"><div class="text-temple-muted">待付款</div><div class="text-3xl font-bold text-[#5A4636]">3</div></div>
+  <div class="rounded-xl border border-[#E2D9CC] bg-white p-4"><div class="text-temple-muted">已付款筆數</div><div class="text-3xl font-bold text-temple-bluedk">2</div></div>
+  <div class="rounded-xl border border-[#E2D9CC] bg-white p-4"><div class="text-temple-muted">已收金額</div><div class="text-3xl font-bold text-temple-bluedk">NT$ 1,600</div></div>
+</div>
+
+<!-- 搜尋與期間 -->
+<form method="get" class="mt-4 flex flex-wrap items-end gap-2">
+  <input type="hidden" name="tab" value="cancelled">
+  <label class="min-w-[220px] flex-1"><span class="sr-only">搜尋</span><input type="search" name="q" value="" class="adm-input" placeholder="搜尋訂單編號、手機、姓名、後五碼"></label>
+  <label class="text-sm text-temple-muted">期間起<input type="date" name="from" value="" class="adm-input"></label>
+  <label class="text-sm text-temple-muted">期間迄<input type="date" name="to" value="" class="adm-input"></label>
+  <button class="btn-outline btn-sm">篩選</button>
+  
+</form>
+
+<!-- 狀態分頁 -->
+<nav class="mt-4 flex flex-wrap gap-2" aria-label="訂單狀態">
+  
+  <a href="../_tab-review/index.html" class="inline-flex min-h-[44px] items-center rounded-full border px-4 font-medium no-underline border-temple-tan bg-white text-temple-ink hover:text-temple-ink">待核對 3</a>
+  
+  <a href="../_tab-pending/index.html" class="inline-flex min-h-[44px] items-center rounded-full border px-4 font-medium no-underline border-temple-tan bg-white text-temple-ink hover:text-temple-ink">待付款 3</a>
+  
+  <a href="../_tab-paid/index.html" class="inline-flex min-h-[44px] items-center rounded-full border px-4 font-medium no-underline border-temple-tan bg-white text-temple-ink hover:text-temple-ink">已付款 2</a>
+  
+  <a href="index.html" class="inline-flex min-h-[44px] items-center rounded-full border px-4 font-medium no-underline border-temple-red bg-temple-red text-white hover:text-white">已取消 1</a>
+  
+  <a href="../_tab-all/index.html" class="inline-flex min-h-[44px] items-center rounded-full border px-4 font-medium no-underline border-temple-tan bg-white text-temple-ink hover:text-temple-ink">全部 9</a>
+  
+</nav>
+
+<div class="mt-4 flex flex-col gap-5 xl:flex-row xl:items-start">
+  <!-- 列表 -->
+  <div class="min-w-0 flex-[3] overflow-x-auto rounded-xl border border-[#E2D9CC] bg-white">
+    <table class="adm-table w-full min-w-[760px] border-collapse text-[15px]">
+      <thead class="bg-[#F8F3EA]"><tr><th>訂單編號</th><th>下單時間</th><th>聯絡人</th><th>金額</th><th>付款方式</th><th>後五碼</th><th>狀態</th><th></th></tr></thead>
+      <tbody>
+      
+        <tr class="border-t border-[#EEE6DA] bg-[#FFF6E6]">
+          <td class="font-mono">T202610070007</td>
+          <td class="text-temple-muted">10/07 17:46</td>
+          <td>吳○婷</td>
+          <td class="font-bold">NT$ 1,200</td>
+          <td>銀行匯款</td>
+          <td class="font-mono">—</td>
+          <td><span class="chip-cancel">已取消</span></td>
+          <td><a href="../_sel-T202610070007-tab-cancelled/index.html#detail" class="btn-outline btn-sm"
+                 hx-target="#detail" hx-swap="innerHTML">查看</a></td>
+        </tr>
+      
+      </tbody>
+    </table>
+    
+  </div>
+
+  <!-- 詳情 -->
+  <section id="detail" class="flex-[2] scroll-mt-4 rounded-xl border border-[#E2D9CC] bg-white p-5 xl:sticky xl:top-4 xl:max-h-[calc(100vh-2rem)] xl:overflow-y-auto">
+    
+
+
+<div class="flex items-center justify-between gap-2">
+  <h2 class="text-xl font-bold">訂單 <span class="font-mono">T202610070007</span></h2>
+  <span class="chip-cancel">已取消</span>
+</div>
+<div class="mt-2 space-y-0.5 text-temple-brown">
+  <div>聯絡人：吳佳婷　<a href="tel:0975666402">0975-***-402</a></div>
+  <div>下單：10/07 17:46　付款：銀行匯款</div>
+  
+  
+  
+</div>
+
+<div class="mt-4 border-t border-[#EEE6DA] pt-3">
+  <strong>登記明細</strong>
+  <ul class="mt-2 space-y-2">
+    
+    <li class="rounded-md bg-[#F8F3EA] px-3 py-2">
+      <div class="font-medium">光明燈 × 2｜吳佳婷<span class="float-right">NT$ 1,200</span></div>
+      <div class="text-sm text-temple-muted">女・農曆 民國80年 六月 十六 未時・100 臺北市中正區示範路 1 號</div>
+    </li>
+    
+  </ul>
+</div>
+
+<div class="mt-4 border-t border-[#EEE6DA] pt-3">
+  <strong>對帳</strong>
+  <div>應收 <strong class="text-temple-red">NT$ 1,200</strong></div>
+  
+    <div class="text-temple-muted">信眾尚未回報後五碼，可依金額與入帳時間比對網銀明細。</div>
+  
+</div>
+
+
+<div class="mt-4 space-y-2">
+  <div class="flex flex-wrap gap-2">
+    
+    
+    
+    <form method="post" data-preview-next="">
+      <input type="hidden" name="csrfmiddlewaretoken" value="7b7lOzFTCYlIKkCe9JxMqPCwDb7gqignrusJSieqmUqpEnWQGX0IpplplqkedvVS"><input type="hidden" name="to" value="review"><input type="hidden" name="memo" value=""><input type="hidden" name="back" value="/manage/orders/?tab=cancelled">
+      <button class="btn-outline">改回待核對</button>
+    </form>
+    
+  </div>
+  
+</div>
+
+
+
+
+
+
+<div class="mt-4 border-t border-[#EEE6DA] pt-3">
+  <strong>安燈照片</strong>
+  
+  <form method="post" data-preview-next="" enctype="multipart/form-data" class="mt-2 flex flex-wrap items-center gap-2">
+    <input type="hidden" name="csrfmiddlewaretoken" value="7b7lOzFTCYlIKkCe9JxMqPCwDb7gqignrusJSieqmUqpEnWQGX0IpplplqkedvVS"><input type="hidden" name="back" value="/manage/orders/?tab=cancelled">
+    <input type="file" name="photos" accept="image/*" multiple required class="min-w-0 flex-1 text-sm">
+    <button class="btn-outline btn-sm">上傳</button>
+  </form>
+  <p class="text-sm text-temple-muted">手機可直接拍照上傳，信眾在登記查詢頁看得到。</p>
+</div>
+
+<details class="mt-4 border-t border-[#EEE6DA] pt-3">
+  <summary class="cursor-pointer font-bold">操作紀錄（2）</summary>
+  <ul class="mt-2 space-y-1 text-sm">
+    
+    <li class="text-temple-brown">10/07 17:46・系統・待付款 → 已取消　示範資料</li>
+    
+    <li class="text-temple-brown">10/07 17:46・系統・— → 待付款　示範資料</li>
+    
+  </ul>
+</details>
+
+
+
+  </section>
+</div>
+
+    <form method="post" data-preview-next="" class="mt-10 md:hidden"><input type="hidden" name="csrfmiddlewaretoken" value="7b7lOzFTCYlIKkCe9JxMqPCwDb7gqignrusJSieqmUqpEnWQGX0IpplplqkedvVS"><button class="btn-outline btn-sm">登出</button></form>
+  </main>
+</div>
+
+
+<meta name="robots" content="noindex,nofollow">
+<style>.pv-bar{position:fixed;left:12px;bottom:12px;z-index:9999;display:flex;gap:8px;align-items:center;
+background:#2A1A14;color:#FFF8EA;padding:8px 14px;border-radius:999px;font:14px/1.4 "Noto Sans TC",sans-serif;
+box-shadow:0 4px 16px rgba(0,0,0,.25)}.pv-bar a{color:#E8CF8A;text-decoration:underline}</style>
+<div class="pv-bar" role="note">預覽版・示範資料・表單不會送出　<a href="../../../_preview/index.html">頁面導覽</a></div>
+<script>
+var PV_ROOT = '../../../';
+document.addEventListener('htmx:afterSwap', function (e) {
+  e.detail.target.querySelectorAll('[data-pv-root]').forEach(function (el) {
+    ['href', 'src'].forEach(function (a) {
+      var v = el.getAttribute(a);
+      if (v && v.charAt(0) !== '#') el.setAttribute(a, PV_ROOT + v);
+    });
+    el.removeAttribute('data-pv-root');
+  });
+});
+document.addEventListener('submit', function (e) {
+  var to = e.target.getAttribute('data-preview-next');
+  e.preventDefault();
+  if (to) location.href = to; else alert('預覽版：此操作不會真的送出。');
+}, true);
+document.addEventListener('click', function (e) {
+  if (e.target.closest('a[data-preview-off]')) { e.preventDefault(); alert('預覽版未提供此頁面。'); }
+}, true);
+</script>
+</body>
+</html>
