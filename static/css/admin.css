@@ -15,3 +15,14 @@ body { font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-se
 #nav-sidebar-inner > div:first-child, #nav-sidebar-inner > div:last-child { color: #FFF8EA !important; }
 #nav-sidebar-inner > div:first-child *, #nav-sidebar-inner > div:last-child * { color: inherit; }
 #nav-sidebar-inner > div:first-child :not(.material-symbols-outlined) { font-family: "Noto Serif TC", serif; }
+
+/* 圖示字型（Material Symbols，約 290KB）載入前，瀏覽器會把圖示名稱（如 dock_to_right）當文字顯示而擠壓重疊。
+   載入完成前先隱藏並固定寬度，由 admin.js 在字型就緒後加上 .icons-ready。 */
+html:not(.icons-ready) .material-symbols-outlined {
+  color: transparent !important;
+  display: inline-block;
+  width: 1.25em !important;
+  max-width: 1.25em !important;
+  overflow: hidden !important;
+  white-space: nowrap;
+}
